@@ -1,0 +1,125 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "wan2.2_ti2v_5B_fp16.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": { "title": "Load Wan2.2 T2V 5B" }
+  },
+  "2": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "umt5_xxl_fp16.safetensors",
+      "type": "wan"
+    },
+    "_meta": { "title": "Load UMT5-XXL" }
+  },
+  "3": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "wan2.2_vae.safetensors"
+    },
+    "_meta": { "title": "Load Wan2.2 VAE" }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "A girl is walking on the beach, waves gently lapping at her feet, sunset lighting, cinematic, beautiful scenery",
+      "clip": ["2", 0]
+    },
+    "_meta": { "title": "Positive Prompt" }
+  },
+  "5": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "",
+      "clip": ["2", 0]
+    },
+    "_meta": { "title": "Negative Prompt" }
+  },
+  "6": {
+    "class_type": "WanImageToVideo",
+    "inputs": {
+      "positive": ["4", 0],
+      "negative": ["5", 0],
+      "vae": ["3", 0],
+      "width": 832,
+      "height": 480,
+      "length": 33,
+      "batch_size": 1
+    },
+    "_meta": { "title": "Wan T2V Latent (832x480, 33f)" }
+  },
+  "7": {
+    "class_type": "ModelSamplingSD3",
+    "inputs": {
+      "shift": 5.0,
+      "model": ["1", 0]
+    },
+    "_meta": { "title": "Model Sampling SD3" }
+  },
+  "8": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": ["7", 0],
+      "conditioning": ["6", 0]
+    },
+    "_meta": { "title": "Basic Guider" }
+  },
+  "9": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "uni_pc_bh2"
+    },
+    "_meta": { "title": "Sampler Select" }
+  },
+  "10": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "scheduler": "simple",
+      "steps": 30,
+      "denoise": 1.0,
+      "model": ["7", 0]
+    },
+    "_meta": { "title": "Scheduler (30 steps)" }
+  },
+  "11": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 42
+    },
+    "_meta": { "title": "Random Noise" }
+  },
+  "12": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": ["11", 0],
+      "guider": ["8", 0],
+      "sampler": ["9", 0],
+      "sigmas": ["10", 0],
+      "latent_image": ["6", 2]
+    },
+    "_meta": { "title": "Sampler Custom Advanced" }
+  },
+  "13": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["12", 0],
+      "vae": ["3", 0]
+    },
+    "_meta": { "title": "VAE Decode" }
+  },
+  "14": {
+    "class_type": "SaveAnimatedWEBP",
+    "inputs": {
+      "filename_prefix": "bench_wan22_t2v",
+      "fps": 16,
+      "lossless": false,
+      "quality": 80,
+      "method": "default",
+      "images": ["13", 0]
+    },
+    "_meta": { "title": "Save Video (WEBP)" }
+  }
+}

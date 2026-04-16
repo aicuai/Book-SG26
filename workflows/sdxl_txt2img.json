@@ -1,0 +1,66 @@
+{
+  "1": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "SDXL/sd_xl_base_1.0.safetensors"
+    },
+    "_meta": { "title": "Load SDXL Checkpoint" }
+  },
+  "2": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "1girl, upper body, smile, cherry blossom, spring, beautiful lighting, masterpiece, best quality",
+      "clip": ["1", 1]
+    },
+    "_meta": { "title": "Positive Prompt" }
+  },
+  "3": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "worst quality, low quality, blurry, deformed",
+      "clip": ["1", 1]
+    },
+    "_meta": { "title": "Negative Prompt" }
+  },
+  "4": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 1
+    },
+    "_meta": { "title": "Empty Latent (1024x1024)" }
+  },
+  "5": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 42,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler_ancestral",
+      "scheduler": "normal",
+      "denoise": 1.0,
+      "model": ["1", 0],
+      "positive": ["2", 0],
+      "negative": ["3", 0],
+      "latent_image": ["4", 0]
+    },
+    "_meta": { "title": "KSampler" }
+  },
+  "6": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["5", 0],
+      "vae": ["1", 2]
+    },
+    "_meta": { "title": "VAE Decode" }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "bench_sdxl",
+      "images": ["6", 0]
+    },
+    "_meta": { "title": "Save Image" }
+  }
+}
