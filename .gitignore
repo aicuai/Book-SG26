@@ -18,6 +18,9 @@ node_modules/
 # Benchmark results (generated)
 results/
 
+# Dev files (SSH keys, passwords, internal scripts)
+dev/
+
 # Temp files
 temp/
 

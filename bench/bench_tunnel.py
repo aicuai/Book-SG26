@@ -42,7 +42,7 @@ from datetime import datetime
 from pathlib import Path
 
 DEFAULT_RUNS = 3
-WORKFLOW_DIR = Path(__file__).parent.parent / "workflows"
+WORKFLOW_DIR = Path(__file__).parent.parent / "api-workflows"
 
 
 # ============================================================
@@ -414,7 +414,7 @@ def main():
         summary["sdxl_txt2img"] = {
             "cold_start_median_s": cold_med,
             "warm_start_median_s": warm_med,
-            "workflow": "workflows/sdxl_txt2img.json",
+            "workflow": "api-workflows/sdxl_txt2img.json",
             "results": sdxl_results,
         }
         print(f"\n  SDXL cold median: {cold_med}s / warm median: {warm_med}s")
@@ -430,7 +430,7 @@ def main():
         summary["wan22_t2v"] = {
             "cold_start_median_s": cold_med,
             "warm_start_median_s": warm_med,
-            "workflow": "workflows/wan22_t2v.json",
+            "workflow": "api-workflows/wan22_t2v.json",
             "results": wan_results,
         }
         print(f"\n  Wan2.2 cold median: {cold_med}s / warm median: {warm_med}s")

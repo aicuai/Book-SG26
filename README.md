@@ -34,8 +34,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 |---------|------|
 | `ComfyUI.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Cloudflare トンネル） |
 | `ComfyUI-pinggy.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Pinggy トンネル） |
-| `workflows/sdxl_txt2img.json` | SDXL 画像生成ワークフロー |
-| `workflows/wan22_t2v.json` | Wan2.2 テキストから動画生成ワークフロー |
+| `api-workflows/sdxl_txt2img.json` | SDXL 画像生成ワークフロー |
+| `api-workflows/wan22_t2v.json` | Wan2.2 テキストから動画生成ワークフロー |
 | `bench/bench_tunnel.py` | トンネル方式ベンチマークスクリプト |
 
 ## Google Colab での使い方
@@ -64,7 +64,7 @@ Pinggy の詳細: https://pinggy.io/
 
 ## ワークフロー
 
-`workflows/` ディレクトリに ComfyUI API 形式のワークフロー JSON を収録しています。
+`api-workflows/` ディレクトリに ComfyUI API 形式のワークフロー JSON を収録しています。
 
 | ワークフロー | 用途 | 必要モデル |
 |-------------|------|-----------|
