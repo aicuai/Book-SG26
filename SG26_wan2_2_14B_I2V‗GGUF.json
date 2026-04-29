@@ -1,8 +1,8 @@
 {
   "id": "362547fc-41f3-4ab0-ae66-448cbb87c179",
   "revision": 0,
-  "last_node_id": 148,
-  "last_link_id": 278,
+  "last_node_id": 149,
+  "last_link_id": 292,
   "nodes": [
     {
       "id": 7,
@@ -16,7 +16,7 @@
         212.125
       ],
       "flags": {},
-      "order": 14,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -40,15 +40,15 @@
           "type": "CONDITIONING",
           "slot_index": 0,
           "links": [
-            188
+            283
           ]
         }
       ],
       "title": "CLIP Text Encode (Negative Prompt)",
       "properties": {
+        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
-        "Node name for S&R": "CLIPTextEncode",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -63,243 +63,10 @@
         }
       },
       "widgets_values": [
-        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走, Loop video"
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走,"
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 68,
-      "type": "LoadImage",
-      "pos": [
-        96.46102931191007,
-        919.4680514000008
-      ],
-      "size": [
-        556.328125,
-        499.953125
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "参照画像（開始フレーム）",
-          "name": "image",
-          "type": "COMBO",
-          "widget": {
-            "name": "image"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "slot_index": 0,
-          "links": [
-            197
-          ]
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "slot_index": 1,
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.45",
-        "Node name for S&R": "LoadImage",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65,
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "sg26_i2v_image_SAMPLE_mei.png",
-        "image"
-      ]
-    },
-    {
-      "id": 57,
-      "type": "KSamplerAdvanced",
-      "pos": [
-        1548.096516983617,
-        -112.52069300835865
-      ],
-      "size": [
-        343.203125,
-        666.625
-      ],
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "showAdvanced": true,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 266
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 194
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 195
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 193
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            113
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.45",
-        "Node name for S&R": "KSamplerAdvanced",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65,
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "enable",
-        692582135559510,
-        "randomize",
-        6,
-        1,
-        "euler",
-        "simple",
-        0,
-        3,
-        "enable"
-      ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        820.5810534317152,
-        915.6143085307547
-      ],
-      "size": [
-        553.40625,
-        253.453125
-      ],
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 256
-        },
-        {
-          "label": "プロンプト（英語推奨）",
-          "name": "text",
-          "type": "STRING",
-          "widget": {
-            "name": "text"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            187
-          ]
-        }
-      ],
-      "title": "CLIP Text Encode (Positive Prompt)",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.45",
-        "Node name for S&R": "CLIPTextEncode",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65,
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "Keep the character design from the input image. Girl performs a short, cute idol Dancing as I walk,dance with steps, rhythmic arm movements, and a cheerful smile. The camera tracks her gently and adds a slight orbit. Her skirt, ribbons, and twin-tails move naturally with the dance. Bright concert lighting, smooth motion, stable character consistency, vibrant anime look, 6500K color balance.,\nwith the camera circling around her for the shot,"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 70,
-      "type": "Note",
-      "pos": [
-        554.563760362503,
-        1944.9562428703352
-      ],
-      "size": [
-        340,
-        120
-      ],
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [],
-      "title": "Note: Video Size",
-      "properties": {
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        "デフォルトでは、VRAMの容量が少ないユーザー向けに、動画のサイズを小さく設定しています。VRAMに十分な余裕がある場合は、サイズを変更できます"
-      ],
-      "color": "#432",
-      "bgcolor": "#000"
     },
     {
       "id": 93,
@@ -313,7 +80,7 @@
         234.75
       ],
       "flags": {},
-      "order": 2,
+      "order": 0,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -332,125 +99,6 @@
       "bgcolor": "#000"
     },
     {
-      "id": 97,
-      "type": "WanImageToVideo",
-      "pos": [
-        550.2031823460761,
-        1600.574196450604
-      ],
-      "size": [
-        350,
-        294.1875
-      ],
-      "flags": {},
-      "order": 21,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 187
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 188
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 189
-        },
-        {
-          "name": "clip_vision_output",
-          "shape": 7,
-          "type": "CLIP_VISION_OUTPUT",
-          "link": null
-        },
-        {
-          "name": "start_image",
-          "shape": 7,
-          "type": "IMAGE",
-          "link": 200
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "widget": {
-            "name": "width"
-          },
-          "link": 198
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "widget": {
-            "name": "height"
-          },
-          "link": 199
-        },
-        {
-          "name": "length",
-          "type": "INT",
-          "widget": {
-            "name": "length"
-          },
-          "link": 209
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "slot_index": 0,
-          "links": [
-            191,
-            194
-          ]
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "slot_index": 1,
-          "links": [
-            192,
-            195
-          ]
-        },
-        {
-          "name": "latent",
-          "type": "LATENT",
-          "slot_index": 2,
-          "links": [
-            193
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.3.45",
-        "Node name for S&R": "WanImageToVideo",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        },
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        640,
-        640,
-        161,
-        1
-      ]
-    },
-    {
       "id": 98,
       "type": "GetImageSize+",
       "pos": [
@@ -464,7 +112,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 18,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -478,14 +126,14 @@
           "name": "width",
           "type": "INT",
           "links": [
-            198
+            279
           ]
         },
         {
           "name": "height",
           "type": "INT",
           "links": [
-            199
+            280
           ]
         },
         {
@@ -495,9 +143,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "GetImageSize+",
         "cnr_id": "comfyui_essentials",
         "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
-        "Node name for S&R": "GetImageSize+",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {},
@@ -520,7 +168,7 @@
         140
       ],
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -547,14 +195,14 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            209
+            281
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "ComfyMathExpression",
         "cnr_id": "comfy-core",
         "ver": "0.19.3",
-        "Node name for S&R": "ComfyMathExpression",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -577,7 +225,7 @@
         80
       ],
       "flags": {},
-      "order": 3,
+      "order": 1,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -592,9 +240,9 @@
       ],
       "title": "ターゲットFPS",
       "properties": {
+        "Node name for S&R": "PrimitiveFloat",
         "cnr_id": "comfy-core",
         "ver": "0.19.3",
-        "Node name for S&R": "PrimitiveFloat",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -617,7 +265,7 @@
         101.265625
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -636,9 +284,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ModelPatchTorchSettings",
         "cnr_id": "comfyui-kjnodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
-        "Node name for S&R": "ModelPatchTorchSettings",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -665,7 +313,7 @@
         80
       ],
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -685,9 +333,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "Node name for S&R": "ModelSamplingSD3",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -714,7 +362,7 @@
         80
       ],
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -734,9 +382,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ModelSamplingSD3",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "Node name for S&R": "ModelSamplingSD3",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -763,7 +411,7 @@
         117.3125
       ],
       "flags": {},
-      "order": 4,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -780,9 +428,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "CLIPLoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
-        "Node name for S&R": "CLIPLoader",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -825,17 +473,17 @@
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 191
+          "link": 285
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 192
+          "link": 286
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 113
+          "link": 292
         }
       ],
       "outputs": [
@@ -848,9 +496,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
-        "Node name for S&R": "KSamplerAdvanced",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -876,103 +524,6 @@
         10000,
         "disable"
       ]
-    },
-    {
-      "id": 111,
-      "type": "PrimitiveFloat",
-      "pos": [
-        1098.1855309301925,
-        1602.3354769681735
-      ],
-      "size": [
-        422.0625,
-        80
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "label": "動画の秒数（推奨：5秒～10秒）",
-          "name": "value",
-          "type": "FLOAT",
-          "widget": {
-            "name": "value"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            213
-          ]
-        }
-      ],
-      "title": "動画の秒数",
-      "properties": {
-        "cnr_id": "comfy-core",
-        "ver": "0.19.3",
-        "Node name for S&R": "PrimitiveFloat",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.8"
-        }
-      },
-      "widgets_values": [
-        8
-      ]
-    },
-    {
-      "id": 99,
-      "type": "ResizeShortestToNode",
-      "pos": [
-        124.09332341809835,
-        1586.6719901105307
-      ],
-      "size": [
-        234.65625,
-        138.640625
-      ],
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 197
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            196,
-            200
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-logicutils",
-        "ver": "1.7.2",
-        "Node name for S&R": "ResizeShortestToNode",
-        "ue_properties": {
-          "version": "7.2.2",
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": [
-        640,
-        "LANCZOS"
-      ],
-      "color": "#2a363b",
-      "bgcolor": "#3f5159"
     },
     {
       "id": 100,
@@ -1013,9 +564,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "RIFEInterpolation",
         "aux_id": "GACLove/ComfyUI-VFI",
         "ver": "62c60feff88f651c24e12006567ba48260ab43aa",
-        "Node name for S&R": "RIFEInterpolation",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.1",
@@ -1086,9 +637,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
-        "Node name for S&R": "VHS_VideoCombine"
+        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8"
       },
       "widgets_values": {
         "frame_rate": 8,
@@ -1105,13 +656,13 @@
           "hidden": false,
           "paused": false,
           "params": {
-            "filename": "Wan2.2_I2V_00003.mp4",
-            "subfolder": "2026-04-26",
+            "filename": "Wan2.2_I2V_00024.mp4",
+            "subfolder": "2026-04-29",
             "type": "output",
             "format": "video/h264-mp4",
             "frame_rate": 30,
-            "workflow": "Wan2.2_I2V_00003.png",
-            "fullpath": "/content/drive/MyDrive/ComfyUI_output/2026-04-26/Wan2.2_I2V_00003.mp4"
+            "workflow": "Wan2.2_I2V_00024.png",
+            "fullpath": "S:\\StabilityMatrix-win-x64\\Data\\Packages\\ComfyUI\\output\\2026-04-29\\Wan2.2_I2V_00024.mp4"
           }
         }
       }
@@ -1153,9 +704,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
-        "Node name for S&R": "VAEDecode",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -1183,7 +734,7 @@
         253.203125
       ],
       "flags": {},
-      "order": 6,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1213,7 +764,7 @@
         194.640625
       ],
       "flags": {},
-      "order": 7,
+      "order": 4,
       "mode": 4,
       "inputs": [
         {
@@ -1236,9 +787,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "FILM VFI",
         "cnr_id": "comfyui-frame-interpolation",
-        "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5",
-        "Node name for S&R": "FILM VFI"
+        "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5"
       },
       "widgets_values": [
         "film_net_fp32.pt",
@@ -1258,7 +809,7 @@
         100
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1277,9 +828,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "ModelPatchTorchSettings",
         "cnr_id": "comfyui-kjnodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
-        "Node name for S&R": "ModelPatchTorchSettings",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -1306,7 +857,7 @@
         87.875
       ],
       "flags": {},
-      "order": 8,
+      "order": 5,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -1316,14 +867,14 @@
           "slot_index": 0,
           "links": [
             76,
-            189
+            282
           ]
         }
       ],
       "properties": {
+        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
-        "Node name for S&R": "VAELoader",
         "models": [
           {
             "name": "wan_2.1_vae.safetensors",
@@ -1351,88 +902,6 @@
       "bgcolor": "#533"
     },
     {
-      "id": 143,
-      "type": "UnetLoaderGGUF",
-      "pos": [
-        110.21931758789401,
-        -44.53757164096265
-      ],
-      "size": [
-        470.09375,
-        106.25
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            267
-          ]
-        }
-      ],
-      "properties": {
-        "aux_id": "Isi-dev/ComfyUI_GGUF",
-        "ver": "1.1.10",
-        "Node name for S&R": "UnetLoaderGGUF",
-        "cnr_id": "comfyui-gguf",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 144,
-      "type": "UnetLoaderGGUF",
-      "pos": [
-        110.4106321173353,
-        264.637608865095
-      ],
-      "size": [
-        477.53125,
-        106.640625
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            268
-          ]
-        }
-      ],
-      "properties": {
-        "aux_id": "Isi-dev/ComfyUI_GGUF",
-        "ver": "1.1.10",
-        "Node name for S&R": "UnetLoaderGGUF",
-        "cnr_id": "comfyui-gguf",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 127,
       "type": "Power Lora Loader (rgthree)",
       "pos": [
@@ -1444,7 +913,7 @@
         260.625
       ],
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1479,10 +948,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2604070017",
         "Show Strengths": "Single Strength",
         "Match": "",
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2604070017",
         "aux_id": "rgthree/rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -1525,7 +994,7 @@
         906.71875
       ],
       "flags": {},
-      "order": 11,
+      "order": 6,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1555,7 +1024,7 @@
         249.5
       ],
       "flags": {},
-      "order": 19,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -1590,10 +1059,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "rgthree-comfy",
-        "ver": "1.0.2604070017",
         "Show Strengths": "Single Strength",
         "Match": "",
+        "cnr_id": "rgthree-comfy",
+        "ver": "1.0.2604070017",
         "aux_id": "rgthree/rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -1623,6 +1092,521 @@
       ],
       "color": "#223",
       "bgcolor": "#335"
+    },
+    {
+      "id": 143,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        110.21931758789401,
+        -44.53757164096265
+      ],
+      "size": [
+        470.09375,
+        106.25
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
+        "aux_id": "Isi-dev/ComfyUI_GGUF",
+        "ver": "1.1.10",
+        "cnr_id": "comfyui-gguf",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Wan\\wan2.2_i2v_high_noise_14B_Q8_0.gguf"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 144,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        110.4106321173353,
+        264.637608865095
+      ],
+      "size": [
+        477.53125,
+        106.640625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UnetLoaderGGUF",
+        "aux_id": "Isi-dev/ComfyUI_GGUF",
+        "ver": "1.1.10",
+        "cnr_id": "comfyui-gguf",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Wan\\wan2.2_i2v_low_noise_14B_Q8_0.gguf"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 111,
+      "type": "PrimitiveFloat",
+      "pos": [
+        1098.1855309301925,
+        1602.3354769681735
+      ],
+      "size": [
+        422.0625,
+        80
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "動画の秒数（推奨：5秒～10秒）",
+          "name": "value",
+          "type": "FLOAT",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            213
+          ]
+        }
+      ],
+      "title": "動画の秒数",
+      "properties": {
+        "Node name for S&R": "PrimitiveFloat",
+        "cnr_id": "comfy-core",
+        "ver": "0.19.3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        820.5810534317152,
+        915.6143085307547
+      ],
+      "size": [
+        553.40625,
+        253.453125
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 256
+        },
+        {
+          "label": "プロンプト（英語推奨）",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "slot_index": 0,
+          "links": [
+            284
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "女の子が歌っている、自然な動きで滑らかな動作。"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 68,
+      "type": "LoadImage",
+      "pos": [
+        96.46102931191007,
+        919.4680514000008
+      ],
+      "size": [
+        556.328125,
+        499.953125
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "参照画像（開始フレーム）",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "slot_index": 0,
+          "links": [
+            197
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "sg26_i2v_image_SAMPLE_mei.png",
+        "image"
+      ]
+    },
+    {
+      "id": 149,
+      "type": "PainterI2V",
+      "pos": [
+        484.3283593290624,
+        1594.1864728113737
+      ],
+      "size": [
+        270,
+        234
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 284
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 283
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 282
+        },
+        {
+          "name": "clip_vision_output",
+          "shape": 7,
+          "type": "CLIP_VISION_OUTPUT",
+          "link": null
+        },
+        {
+          "name": "start_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 291
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 279
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 280
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 281
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            285,
+            288
+          ]
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            286,
+            289
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            290
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PainterI2V"
+      },
+      "widgets_values": [
+        832,
+        480,
+        81,
+        1,
+        1.15
+      ]
+    },
+    {
+      "id": 70,
+      "type": "Note",
+      "pos": [
+        486.5230712328646,
+        1892.9939914970448
+      ],
+      "size": [
+        340,
+        120
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Note: Video Size",
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "デフォルトでは、VRAMの容量が少ないユーザー向けに、動画のサイズを小さく設定しています。VRAMに十分な余裕がある場合は、サイズを変更できます"
+      ],
+      "color": "#432",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 99,
+      "type": "ResizeShortestToNode",
+      "pos": [
+        124.09332341809835,
+        1586.6719901105307
+      ],
+      "size": [
+        234.65625,
+        138.640625
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            196,
+            291
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ResizeShortestToNode",
+        "cnr_id": "comfyui-logicutils",
+        "ver": "1.7.2",
+        "ue_properties": {
+          "version": "7.2.2",
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        640,
+        "LANCZOS"
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 57,
+      "type": "KSamplerAdvanced",
+      "pos": [
+        1544.978617199718,
+        -93.81299695433339
+      ],
+      "size": [
+        343.203125,
+        666.625
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 266
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 288
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 289
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 290
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            292
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerAdvanced",
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "enable",
+        126107507914686,
+        "randomize",
+        6,
+        1,
+        "euler",
+        "simple",
+        0,
+        3,
+        "enable"
+      ]
     }
   ],
   "links": [
@@ -1635,84 +1619,12 @@
       "VAE"
     ],
     [
-      113,
-      57,
-      0,
-      58,
-      3,
-      "LATENT"
-    ],
-    [
       124,
       58,
       0,
       8,
       0,
       "LATENT"
-    ],
-    [
-      187,
-      6,
-      0,
-      97,
-      0,
-      "CONDITIONING"
-    ],
-    [
-      188,
-      7,
-      0,
-      97,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      189,
-      39,
-      0,
-      97,
-      2,
-      "VAE"
-    ],
-    [
-      191,
-      97,
-      0,
-      58,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      192,
-      97,
-      1,
-      58,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      193,
-      97,
-      2,
-      57,
-      3,
-      "LATENT"
-    ],
-    [
-      194,
-      97,
-      0,
-      57,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      195,
-      97,
-      1,
-      57,
-      2,
-      "CONDITIONING"
     ],
     [
       196,
@@ -1731,44 +1643,12 @@
       "IMAGE"
     ],
     [
-      198,
-      98,
-      0,
-      97,
-      5,
-      "INT"
-    ],
-    [
-      199,
-      98,
-      1,
-      97,
-      6,
-      "INT"
-    ],
-    [
-      200,
-      99,
-      0,
-      97,
-      4,
-      "IMAGE"
-    ],
-    [
       202,
       8,
       0,
       100,
       0,
       "IMAGE"
-    ],
-    [
-      209,
-      105,
-      1,
-      97,
-      7,
-      "INT"
     ],
     [
       210,
@@ -1897,6 +1777,110 @@
       146,
       0,
       "IMAGE"
+    ],
+    [
+      279,
+      98,
+      0,
+      149,
+      5,
+      "INT"
+    ],
+    [
+      280,
+      98,
+      1,
+      149,
+      6,
+      "INT"
+    ],
+    [
+      281,
+      105,
+      1,
+      149,
+      7,
+      "INT"
+    ],
+    [
+      282,
+      39,
+      0,
+      149,
+      2,
+      "VAE"
+    ],
+    [
+      283,
+      7,
+      0,
+      149,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      284,
+      6,
+      0,
+      149,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      285,
+      149,
+      0,
+      58,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      286,
+      149,
+      1,
+      58,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      288,
+      149,
+      0,
+      57,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      289,
+      149,
+      1,
+      57,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      290,
+      149,
+      2,
+      57,
+      3,
+      "LATENT"
+    ],
+    [
+      291,
+      99,
+      0,
+      149,
+      4,
+      "IMAGE"
+    ],
+    [
+      292,
+      57,
+      0,
+      58,
+      3,
+      "LATENT"
     ]
   ],
   "groups": [
@@ -1982,13 +1966,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.78715693552213,
+      "scale": 0.2896643797366882,
       "offset": [
-        128.6678543098439,
-        264.8768232662084
+        683.8174402413026,
+        119.76622486872839
       ]
     },
-    "frontendVersion": "1.42.15",
+    "frontendVersion": "1.42.11",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
@@ -2001,21 +1985,21 @@
           "68",
           "image",
           {
-            "height": 196
+            "height": 269
           }
         ],
         [
           "6",
           "text",
           {
-            "height": 133
+            "height": 102
           }
         ],
         [
           "7",
           "text",
           {
-            "height": 121
+            "height": 82
           }
         ],
         [
