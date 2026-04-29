@@ -46,9 +46,9 @@
       ],
       "title": "CLIP Text Encode (Negative Prompt)",
       "properties": {
-        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "CLIPTextEncode",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -112,7 +112,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 20,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -143,9 +143,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "GetImageSize+",
         "cnr_id": "comfyui_essentials",
         "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
+        "Node name for S&R": "GetImageSize+",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {},
@@ -168,7 +168,7 @@
         140
       ],
       "flags": {},
-      "order": 16,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -200,9 +200,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ComfyMathExpression",
         "cnr_id": "comfy-core",
         "ver": "0.19.3",
+        "Node name for S&R": "ComfyMathExpression",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -240,9 +240,9 @@
       ],
       "title": "ターゲットFPS",
       "properties": {
-        "Node name for S&R": "PrimitiveFloat",
         "cnr_id": "comfy-core",
         "ver": "0.19.3",
+        "Node name for S&R": "PrimitiveFloat",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -265,7 +265,7 @@
         101.265625
       ],
       "flags": {},
-      "order": 14,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -284,9 +284,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelPatchTorchSettings",
         "cnr_id": "comfyui-kjnodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
+        "Node name for S&R": "ModelPatchTorchSettings",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -313,7 +313,7 @@
         80
       ],
       "flags": {},
-      "order": 21,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -333,9 +333,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelSamplingSD3",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
+        "Node name for S&R": "ModelSamplingSD3",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -362,7 +362,7 @@
         80
       ],
       "flags": {},
-      "order": 22,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -382,9 +382,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelSamplingSD3",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
+        "Node name for S&R": "ModelSamplingSD3",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -428,9 +428,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPLoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.46",
+        "Node name for S&R": "CLIPLoader",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -496,9 +496,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "KSamplerAdvanced",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "KSamplerAdvanced",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -564,9 +564,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "RIFEInterpolation",
         "aux_id": "GACLove/ComfyUI-VFI",
         "ver": "62c60feff88f651c24e12006567ba48260ab43aa",
+        "Node name for S&R": "RIFEInterpolation",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.1",
@@ -591,7 +591,7 @@
       ],
       "size": [
         1018.1875,
-        1620.6890625
+        334
       ],
       "flags": {},
       "order": 28,
@@ -637,9 +637,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
-        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8"
+        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
+        "Node name for S&R": "VHS_VideoCombine"
       },
       "widgets_values": {
         "frame_rate": 8,
@@ -704,9 +704,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VAEDecode",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "VAEDecode",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -787,9 +787,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "FILM VFI",
         "cnr_id": "comfyui-frame-interpolation",
-        "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5"
+        "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5",
+        "Node name for S&R": "FILM VFI"
       },
       "widgets_values": [
         "film_net_fp32.pt",
@@ -809,7 +809,7 @@
         100
       ],
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -828,9 +828,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ModelPatchTorchSettings",
         "cnr_id": "comfyui-kjnodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
+        "Node name for S&R": "ModelPatchTorchSettings",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -872,9 +872,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "VAELoader",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "VAELoader",
         "models": [
           {
             "name": "wan_2.1_vae.safetensors",
@@ -913,7 +913,7 @@
         260.625
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -948,10 +948,10 @@
         }
       ],
       "properties": {
-        "Show Strengths": "Single Strength",
-        "Match": "",
         "cnr_id": "rgthree-comfy",
         "ver": "1.0.2604070017",
+        "Show Strengths": "Single Strength",
+        "Match": "",
         "aux_id": "rgthree/rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -1024,7 +1024,7 @@
         249.5
       ],
       "flags": {},
-      "order": 18,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1059,10 +1059,10 @@
         }
       ],
       "properties": {
-        "Show Strengths": "Single Strength",
-        "Match": "",
         "cnr_id": "rgthree-comfy",
         "ver": "1.0.2604070017",
+        "Show Strengths": "Single Strength",
+        "Match": "",
         "aux_id": "rgthree/rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -1094,88 +1094,6 @@
       "bgcolor": "#335"
     },
     {
-      "id": 143,
-      "type": "UnetLoaderGGUF",
-      "pos": [
-        110.21931758789401,
-        -44.53757164096265
-      ],
-      "size": [
-        470.09375,
-        106.25
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            267
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UnetLoaderGGUF",
-        "aux_id": "Isi-dev/ComfyUI_GGUF",
-        "ver": "1.1.10",
-        "cnr_id": "comfyui-gguf",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "Wan\\wan2.2_i2v_high_noise_14B_Q8_0.gguf"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 144,
-      "type": "UnetLoaderGGUF",
-      "pos": [
-        110.4106321173353,
-        264.637608865095
-      ],
-      "size": [
-        477.53125,
-        106.640625
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            268
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UnetLoaderGGUF",
-        "aux_id": "Isi-dev/ComfyUI_GGUF",
-        "ver": "1.1.10",
-        "cnr_id": "comfyui-gguf",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.7"
-        }
-      },
-      "widgets_values": [
-        "Wan\\wan2.2_i2v_low_noise_14B_Q8_0.gguf"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 111,
       "type": "PrimitiveFloat",
       "pos": [
@@ -1187,7 +1105,7 @@
         80
       ],
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -1211,9 +1129,9 @@
       ],
       "title": "動画の秒数",
       "properties": {
-        "Node name for S&R": "PrimitiveFloat",
         "cnr_id": "comfy-core",
         "ver": "0.19.3",
+        "Node name for S&R": "PrimitiveFloat",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -1266,9 +1184,9 @@
       ],
       "title": "CLIP Text Encode (Positive Prompt)",
       "properties": {
-        "Node name for S&R": "CLIPTextEncode",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "CLIPTextEncode",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -1300,7 +1218,7 @@
         499.953125
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -1330,9 +1248,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "LoadImage",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -1363,7 +1281,7 @@
         234
       ],
       "flags": {},
-      "order": 23,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -1444,6 +1362,8 @@
         }
       ],
       "properties": {
+        "aux_id": "princepainter/ComfyUI-PainterI2V",
+        "ver": "652565fc032c77855a99a941f2c3a33e603a8258",
         "Node name for S&R": "PainterI2V"
       },
       "widgets_values": [
@@ -1466,7 +1386,7 @@
         120
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -1496,7 +1416,7 @@
         138.640625
       ],
       "flags": {},
-      "order": 17,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -1516,9 +1436,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "ResizeShortestToNode",
         "cnr_id": "comfyui-logicutils",
         "ver": "1.7.2",
+        "Node name for S&R": "ResizeShortestToNode",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {},
@@ -1579,9 +1499,9 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "KSamplerAdvanced",
         "cnr_id": "comfy-core",
         "ver": "0.3.45",
+        "Node name for S&R": "KSamplerAdvanced",
         "enableTabs": false,
         "tabWidth": 65,
         "tabXOffset": 10,
@@ -1607,6 +1527,88 @@
         3,
         "enable"
       ]
+    },
+    {
+      "id": 143,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        110.21931758789401,
+        -44.53757164096265
+      ],
+      "size": [
+        470.09375,
+        106.25
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            267
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Isi-dev/ComfyUI_GGUF",
+        "ver": "1.1.10",
+        "Node name for S&R": "UnetLoaderGGUF",
+        "cnr_id": "comfyui-gguf",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Wan2.2-I2V-A14B-HighNoise-Q8_0.gguf"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 144,
+      "type": "UnetLoaderGGUF",
+      "pos": [
+        110.4106321173353,
+        264.637608865095
+      ],
+      "size": [
+        477.53125,
+        106.640625
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            268
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "Isi-dev/ComfyUI_GGUF",
+        "ver": "1.1.10",
+        "Node name for S&R": "UnetLoaderGGUF",
+        "cnr_id": "comfyui-gguf",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.7"
+        }
+      },
+      "widgets_values": [
+        "Wan2.2-I2V-A14B-LowNoise-Q8_0.gguf"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
     }
   ],
   "links": [
@@ -1966,13 +1968,13 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.2896643797366882,
+      "scale": 0.3186308177103572,
       "offset": [
-        683.8174402413026,
-        119.76622486872839
+        966.4981351949112,
+        438.0085176791299
       ]
     },
-    "frontendVersion": "1.42.11",
+    "frontendVersion": "1.42.15",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
