@@ -143,9 +143,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui_essentials",
+        "aux_id": "cubiq/ComfyUI_essentials",
         "ver": "9d9f4bedfc9f0321c19faf71855e228c93bd0dc9",
         "Node name for S&R": "GetImageSize+",
+        "cnr_id": "comfyui_essentials",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {},
@@ -284,9 +285,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
         "Node name for S&R": "ModelPatchTorchSettings",
+        "cnr_id": "comfyui-kjnodes",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -637,9 +639,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
-        "Node name for S&R": "VHS_VideoCombine"
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite"
       },
       "widgets_values": {
         "frame_rate": 8,
@@ -787,9 +790,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-frame-interpolation",
+        "aux_id": "Fannovel16/ComfyUI-Frame-Interpolation",
         "ver": "26545cc2dd95bc3d27f056016300673bdeee78f5",
-        "Node name for S&R": "FILM VFI"
+        "Node name for S&R": "FILM VFI",
+        "cnr_id": "comfyui-frame-interpolation"
       },
       "widgets_values": [
         "film_net_fp32.pt",
@@ -828,9 +832,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-kjnodes",
+        "aux_id": "kijai/ComfyUI-KJNodes",
         "ver": "a6b867b63a29ca48ddb15c589e17a9f2d8530d57",
         "Node name for S&R": "ModelPatchTorchSettings",
+        "cnr_id": "comfyui-kjnodes",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {
@@ -948,11 +953,11 @@
         }
       ],
       "properties": {
-        "cnr_id": "rgthree-comfy",
+        "aux_id": "rgthree/rgthree-comfy",
         "ver": "1.0.2604070017",
         "Show Strengths": "Single Strength",
         "Match": "",
-        "aux_id": "rgthree/rgthree-comfy",
+        "cnr_id": "rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -1059,11 +1064,11 @@
         }
       ],
       "properties": {
-        "cnr_id": "rgthree-comfy",
+        "aux_id": "rgthree/rgthree-comfy",
         "ver": "1.0.2604070017",
         "Show Strengths": "Single Strength",
         "Match": "",
-        "aux_id": "rgthree/rgthree-comfy",
+        "cnr_id": "rgthree-comfy",
         "ue_properties": {
           "widget_ue_connectable": {},
           "input_ue_unconnectable": {},
@@ -1265,7 +1270,7 @@
         }
       },
       "widgets_values": [
-        "sg26_i2v_image_SAMPLE_mei.png",
+        "sg26_I2V_image_SAMPLE_mei.png",
         "image"
       ]
     },
@@ -1436,9 +1441,10 @@
         }
       ],
       "properties": {
-        "cnr_id": "comfyui-logicutils",
+        "aux_id": "aria1th/ComfyUI-LogicUtils",
         "ver": "1.7.2",
         "Node name for S&R": "ResizeShortestToNode",
+        "cnr_id": "comfyui-logicutils",
         "ue_properties": {
           "version": "7.2.2",
           "widget_ue_connectable": {},
@@ -1968,10 +1974,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.3186308177103572,
+      "scale": 0.46650738020973415,
       "offset": [
-        966.4981351949112,
-        438.0085176791299
+        272.3065452260565,
+        161.58052217341276
       ]
     },
     "frontendVersion": "1.42.15",
