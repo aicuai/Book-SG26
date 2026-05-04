@@ -1,0 +1,1053 @@
+{
+  "id": "9994178c-856f-479e-8ba6-cda3daf4a117",
+  "revision": 0,
+  "last_node_id": 416,
+  "last_link_id": 740,
+  "nodes": [
+    {
+      "id": 409,
+      "type": "LoadAudio",
+      "pos": [
+        -783.2481637338257,
+        8452.361157071258
+      ],
+      "size": [
+        284,
+        197
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "参照音源ファイル",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "1074_1280x720.mp4",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 411,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        455.8188035208116,
+        7770.710271451142
+      ],
+      "size": [
+        486.109375,
+        615.5813078703704
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 733
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 740
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite"
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "%date:yyyy-MM-dd%/SD2_backup",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "SD2_backup_00001.mp4",
+            "subfolder": "2026-05-04",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "SD2_backup_00001.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI_output/2026-05-04/SD2_backup_00001.mp4"
+          }
+        }
+      }
+    },
+    {
+      "id": 413,
+      "type": "SeedVR2LoadDiTModel",
+      "pos": [
+        1004.7047239538555,
+        7739.819600674775
+      ],
+      "size": [
+        317.5625,
+        380.3125
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "links": [
+            734
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
+        "Node name for S&R": "SeedVR2LoadDiTModel",
+        "cnr_id": "seedvr2_videoupscaler"
+      },
+      "widgets_values": [
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        "cuda:0",
+        0,
+        false,
+        "none",
+        false,
+        "sdpa"
+      ]
+    },
+    {
+      "id": 414,
+      "type": "SeedVR2LoadVAEModel",
+      "pos": [
+        1002.6035896765118,
+        8212.22979617038
+      ],
+      "size": [
+        321.796875,
+        535.3125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_VAE",
+          "type": "SEEDVR2_VAE",
+          "links": [
+            735
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
+        "Node name for S&R": "SeedVR2LoadVAEModel",
+        "cnr_id": "seedvr2_videoupscaler"
+      },
+      "widgets_values": [
+        "ema_vae_fp16.safetensors",
+        "cuda:0",
+        false,
+        1024,
+        128,
+        false,
+        1024,
+        128,
+        "false",
+        "none",
+        false
+      ]
+    },
+    {
+      "id": 415,
+      "type": "SeedVR2VideoUpscaler",
+      "pos": [
+        1377.0951010671974,
+        7674.462212094453
+      ],
+      "size": [
+        385.712890625,
+        670.921875
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 736
+        },
+        {
+          "name": "dit",
+          "type": "SEEDVR2_DIT",
+          "link": 734
+        },
+        {
+          "name": "vae",
+          "type": "SEEDVR2_VAE",
+          "link": 735
+        },
+        {
+          "label": "アップスケール後の解像度 （推奨： 720 or 1080 ）",
+          "name": "resolution",
+          "type": "INT",
+          "widget": {
+            "name": "resolution"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            737
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
+        "Node name for S&R": "SeedVR2VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler"
+      },
+      "widgets_values": [
+        3113196185,
+        "randomize",
+        1080,
+        0,
+        9,
+        false,
+        "lab",
+        0,
+        0,
+        0,
+        0,
+        "cpu",
+        false
+      ]
+    },
+    {
+      "id": 377,
+      "type": "ComfySwitchNode",
+      "pos": [
+        1805.0684269033786,
+        7590.380162137178
+      ],
+      "size": [
+        248.953125,
+        163.328125
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "type": "IMAGE",
+          "link": 705
+        },
+        {
+          "name": "on_true",
+          "type": "IMAGE",
+          "link": 737
+        },
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": 707
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            702
+          ]
+        }
+      ],
+      "title": "Switch❷",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        true
+      ]
+    },
+    {
+      "id": 379,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1788.608755923639,
+        7835.496657011416
+      ],
+      "size": [
+        610.1875,
+        334
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 702
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 703
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "8e4d79471bf1952154768e8435a9300077b534fa",
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "%date:yyyy-MM-dd%/SD2",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "Finp30f_00002.mp4",
+            "subfolder": "2025-12-15",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 60,
+            "workflow": "Finp30f_00002.png",
+            "fullpath": "V:\\StabilityMatrix-win-x64\\Data\\Packages\\ComfyUI\\output\\2025-12-15\\Finp30f_00002.mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 383,
+      "type": "PrimitiveBoolean",
+      "pos": [
+        -120.7079343031894,
+        8642.143557235273
+      ],
+      "size": [
+        503.21875,
+        102
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "アップスケール: ON／OFF　※OFF時は元の解像度で出力",
+          "name": "value",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            707
+          ]
+        }
+      ],
+      "title": "Boolean_B（Upscale: ON/OFF）",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "PrimitiveBoolean"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#2a363b",
+      "bgcolor": "#3f5159"
+    },
+    {
+      "id": 356,
+      "type": "LoadImage",
+      "pos": [
+        -435.47355887542767,
+        7567.120076016571
+      ],
+      "size": [
+        284,
+        432
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "参照イメージ①",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            730
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "sg26_R2V_image_SAMPLE_mei_Charasheet.png",
+        "image"
+      ]
+    },
+    {
+      "id": 405,
+      "type": "LoadVideo",
+      "pos": [
+        -782.0139991830443,
+        7964.850805569796
+      ],
+      "size": [
+        284,
+        406.96875
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [
+        {
+          "label": "参照動画ファイル",
+          "name": "file",
+          "type": "COMBO",
+          "widget": {
+            "name": "file"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "1074_1280x720.mp4",
+        "image"
+      ]
+    },
+    {
+      "id": 353,
+      "type": "LoadImage",
+      "pos": [
+        -434.47051584564264,
+        8522.216653327605
+      ],
+      "size": [
+        284,
+        432
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "参照イメージ③",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            732
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "sg26_R2V_image_SAMPLE_ImageBoard_01.png",
+        "image"
+      ]
+    },
+    {
+      "id": 352,
+      "type": "LoadImage",
+      "pos": [
+        -432.61025162445105,
+        8043.676457069062
+      ],
+      "size": [
+        284,
+        432
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "参照イメージ②",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            731
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "sg26_R2V_image_SAMPLE_rhyth_Charasheet.png",
+        "image"
+      ]
+    },
+    {
+      "id": 410,
+      "type": "ByteDance2ReferenceNode",
+      "pos": [
+        -118.12500398781958,
+        7604.521626459828
+      ],
+      "size": [
+        510.1624999999999,
+        985.9000000000005
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "image_1",
+          "name": "model.reference_images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 730
+        },
+        {
+          "label": "image_2",
+          "name": "model.reference_images.image_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 731
+        },
+        {
+          "label": "image_3",
+          "name": "model.reference_images.image_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 732
+        },
+        {
+          "label": "image_4",
+          "name": "model.reference_images.image_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "label": "video_1",
+          "name": "model.reference_videos.video_1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "label": "audio_1",
+          "name": "model.reference_audios.audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "label": "asset_1",
+          "name": "model.reference_assets.asset_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            727
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "ByteDance2ReferenceNode"
+      },
+      "widgets_values": [
+        "Seedance 2.0",
+        "Use @Image1 for Hibiki Mei’s full character appearance, outfit, hair, face, and color details.\n\nUse @Image2 for Shibuya Riz’s full character appearance, outfit, hair, face, and color details.\n\nUse @Image3 for the Shibuya background atmosphere, shot continuity, framing, and the image-board-based scene flow.\n\nA short anime-style 15-second film set in sunny daytime Shibuya, Tokyo.\n\n\nCut 1, 0-4 seconds:\nIn front of Shibuya Station during a bright sunny daytime. Hibiki Mei is holding her smartphone and looking around with a slightly troubled expression because she cannot find Riz. The area is crowded, with pedestrians, glass station buildings, and the distant atmosphere of the scramble crossing visible in the background. Mei’s long twin-tails and her white frilled outfit sway lightly in the breeze. The camera stays in a third-person cinematic view and gently frames Mei in the busy station area.\n\nCut 2, 4-8 seconds:\nShibuya Riz, wearing her orange hoodie, lightly runs through the crowd while holding her smartphone to her ear. Her expression is slightly flustered, but still cheerful and lively. The camera tracks alongside Riz from the side, while the Shibuya cityscape and passing pedestrians flow behind her. Keep the movement natural and energetic.\n\nCut 3, 8-11 seconds:\nNear the scramble crossing, Mei notices Riz in the distance. Riz also spots Mei and immediately breaks into a bright happy smile. The two girls wave at each other and run closer through the crowd. Keep the timing clear and readable so the moment of noticing each other feels exciting and emotional.\n\nCut 4, 11-15 seconds:\nThe two girls finally meet, smiling happily in relief. Mei and Riz visually confirm each other, laugh together, and then begin walking side by side toward a shopping street lined with show windows. The ending should feel warm, cheerful, and like the beginning of a fun shopping outing together.\n\n\nPhotorealistic Shibuya background, realistic crowd, clear blue sky, bright sunny weather, neutral 6500K daylight. Characters are clean 2D hard cel-shaded anime characters composited naturally into the realistic city. Smooth third-person cinematic camera, coherent continuity between cuts, consistent character designs, no speech bubbles, no manga effects, no smartphone UI popups, no subtitles, no on-screen text, no watermark.\n\n\n\nJapanese dialogue:\n\nCut 1:\nMei: 「あれ…。リズ来ないな…」\n\n\nCut 2:\nRiz: 「ハァ、ハァ…」\n\n\nCut 3:\nRiz: 「お～～い！メイ～～！」\n\nMei: 「っ！（気が付く）」\n\n\nCut 4:\nMei: 「ハチコウ前って言ったじゃ～ん」\nRiz: 「ゴメン ゴメ～ン！」\n\nNegative Prompt:\ninconsistent character design, wrong outfit, wrong hair color, changed eye color, short twin-tails, duplicate main characters, extra characters replacing Mei or Riz, broken anatomy, bad hands, extra fingers, missing fingers, distorted face, unstable face, flickering face, flickering outfit, unstable hair, unnatural running motion, stiff movement, broken crowd perspective, changing weather, rain, night scene, sepia tone, speech bubbles, comic panels, manga motion lines, smartphone UI overlay, subtitle text, captions, watermark, logo overlay",
+        "480p",
+        "16:9",
+        15,
+        true,
+        1233077304,
+        121221,
+        false,
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 366,
+      "type": "GetVideoComponents",
+      "pos": [
+        461.2364300772081,
+        7574.178502896455
+      ],
+      "size": [
+        225,
+        127
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 727
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            705,
+            733,
+            736
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            703,
+            740
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "GetVideoComponents"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
+    }
+  ],
+  "links": [
+    [
+      702,
+      377,
+      0,
+      379,
+      0,
+      "IMAGE"
+    ],
+    [
+      703,
+      366,
+      1,
+      379,
+      1,
+      "AUDIO"
+    ],
+    [
+      705,
+      366,
+      0,
+      377,
+      0,
+      "IMAGE"
+    ],
+    [
+      707,
+      383,
+      0,
+      377,
+      2,
+      "BOOLEAN"
+    ],
+    [
+      727,
+      410,
+      0,
+      366,
+      0,
+      "VIDEO"
+    ],
+    [
+      730,
+      356,
+      0,
+      410,
+      0,
+      "IMAGE"
+    ],
+    [
+      731,
+      352,
+      0,
+      410,
+      1,
+      "IMAGE"
+    ],
+    [
+      732,
+      353,
+      0,
+      410,
+      2,
+      "IMAGE"
+    ],
+    [
+      733,
+      366,
+      0,
+      411,
+      0,
+      "IMAGE"
+    ],
+    [
+      734,
+      413,
+      0,
+      415,
+      1,
+      "SEEDVR2_DIT"
+    ],
+    [
+      735,
+      414,
+      0,
+      415,
+      2,
+      "SEEDVR2_VAE"
+    ],
+    [
+      736,
+      366,
+      0,
+      415,
+      0,
+      "IMAGE"
+    ],
+    [
+      737,
+      415,
+      0,
+      377,
+      1,
+      "IMAGE"
+    ],
+    [
+      740,
+      366,
+      1,
+      411,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Group",
+      "bounding": [
+        -809.4050845165162,
+        7499.490695361351,
+        1213.1254049999998,
+        1469.5911989565675
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Group",
+      "bounding": [
+        423.1584158163443,
+        7503.349129052496,
+        2297.020368247799,
+        1465.2512913927203
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5131581182307067,
+      "offset": [
+        998.6268983061401,
+        -7057.425569821706
+      ]
+    },
+    "frontendVersion": "1.42.15",
+    "workflowRendererVersion": "Vue-corrected",
+    "ue_links": [],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "linearData": {
+      "inputs": [
+        [
+          "356",
+          "image",
+          {
+            "height": 98
+          }
+        ],
+        [
+          "352",
+          "image",
+          {
+            "height": 97
+          }
+        ],
+        [
+          "353",
+          "image",
+          {
+            "height": 97
+          }
+        ],
+        [
+          "405",
+          "file"
+        ],
+        [
+          "409",
+          "audio"
+        ],
+        [
+          "410",
+          "model.prompt",
+          {
+            "height": 508
+          }
+        ],
+        [
+          "410",
+          "model.ratio"
+        ],
+        [
+          "410",
+          "model"
+        ],
+        [
+          "410",
+          "model.duration"
+        ],
+        [
+          "410",
+          "model.generate_audio"
+        ],
+        [
+          "410",
+          "model.resolution"
+        ],
+        [
+          "383",
+          "value"
+        ],
+        [
+          "415",
+          "resolution"
+        ]
+      ],
+      "outputs": [
+        "379"
+      ]
+    },
+    "linearMode": true
+  },
+  "version": 0.4
+}
