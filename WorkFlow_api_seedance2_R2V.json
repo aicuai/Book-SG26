@@ -8,8 +8,8 @@
       "id": 409,
       "type": "LoadAudio",
       "pos": [
-        -783.2481637338257,
-        8452.361157071258
+        -783.248193844551,
+        8452.361073112526
       ],
       "size": [
         284,
@@ -51,8 +51,8 @@
       "id": 411,
       "type": "VHS_VideoCombine",
       "pos": [
-        455.8188035208116,
-        7770.710271451142
+        455.8187573067263,
+        7770.71020312256
       ],
       "size": [
         486.109375,
@@ -96,10 +96,10 @@
         }
       ],
       "properties": {
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
         "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite"
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite"
       },
       "widgets_values": {
         "frame_rate": 24,
@@ -131,8 +131,8 @@
       "id": 413,
       "type": "SeedVR2LoadDiTModel",
       "pos": [
-        1004.7047239538555,
-        7739.819600674775
+        1004.7044732804935,
+        7739.819575926207
       ],
       "size": [
         317.5625,
@@ -159,10 +159,10 @@
         }
       ],
       "properties": {
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
         "Node name for S&R": "SeedVR2LoadDiTModel",
-        "cnr_id": "seedvr2_videoupscaler"
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
         "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
@@ -178,8 +178,8 @@
       "id": 414,
       "type": "SeedVR2LoadVAEModel",
       "pos": [
-        1002.6035896765118,
-        8212.22979617038
+        1002.6035126570561,
+        8212.229742399611
       ],
       "size": [
         321.796875,
@@ -206,10 +206,10 @@
         }
       ],
       "properties": {
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
         "Node name for S&R": "SeedVR2LoadVAEModel",
-        "cnr_id": "seedvr2_videoupscaler"
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
         "ema_vae_fp16.safetensors",
@@ -229,11 +229,11 @@
       "id": 415,
       "type": "SeedVR2VideoUpscaler",
       "pos": [
-        1377.0951010671974,
-        7674.462212094453
+        1377.094986174683,
+        7674.4621449560045
       ],
       "size": [
-        385.712890625,
+        385.703125,
         670.921875
       ],
       "flags": {},
@@ -275,15 +275,15 @@
         }
       ],
       "properties": {
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
         "Node name for S&R": "SeedVR2VideoUpscaler",
-        "cnr_id": "seedvr2_videoupscaler"
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
         3113196185,
         "randomize",
-        1080,
+        720,
         0,
         9,
         false,
@@ -300,8 +300,8 @@
       "id": 377,
       "type": "ComfySwitchNode",
       "pos": [
-        1805.0684269033786,
-        7590.380162137178
+        1805.0681821928715,
+        7590.380128415895
       ],
       "size": [
         248.953125,
@@ -353,8 +353,8 @@
       "id": 379,
       "type": "VHS_VideoCombine",
       "pos": [
-        1788.608755923639,
-        7835.496657011416
+        1788.6085163847297,
+        7835.496304588988
       ],
       "size": [
         610.1875,
@@ -396,10 +396,10 @@
         }
       ],
       "properties": {
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "cnr_id": "comfyui-videohelpersuite",
         "ver": "8e4d79471bf1952154768e8435a9300077b534fa",
         "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite",
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ue_properties": {
           "widget_ue_connectable": {},
           "version": "7.1",
@@ -438,8 +438,8 @@
       "id": 383,
       "type": "PrimitiveBoolean",
       "pos": [
-        -120.7079343031894,
-        8642.143557235273
+        -120.70801921977215,
+        8642.14321075986
       ],
       "size": [
         503.21875,
@@ -484,8 +484,8 @@
       "id": 356,
       "type": "LoadImage",
       "pos": [
-        -435.47355887542767,
-        7567.120076016571
+        -435.47364485135176,
+        7567.119875250078
       ],
       "size": [
         284,
@@ -533,8 +533,8 @@
       "id": 405,
       "type": "LoadVideo",
       "pos": [
-        -782.0139991830443,
-        7964.850805569796
+        -782.0139954450278,
+        7964.850311628292
       ],
       "size": [
         284,
@@ -575,8 +575,8 @@
       "id": 353,
       "type": "LoadImage",
       "pos": [
-        -434.47051584564264,
-        8522.216653327605
+        -434.47056223032826,
+        8522.216467618538
       ],
       "size": [
         284,
@@ -624,8 +624,8 @@
       "id": 352,
       "type": "LoadImage",
       "pos": [
-        -432.61025162445105,
-        8043.676457069062
+        -432.61027720819993,
+        8043.676001581469
       ],
       "size": [
         284,
@@ -673,12 +673,12 @@
       "id": 410,
       "type": "ByteDance2ReferenceNode",
       "pos": [
-        -118.12500398781958,
-        7604.521626459828
+        -118.12505322232653,
+        7604.521232408311
       ],
       "size": [
-        510.1624999999999,
-        985.9000000000005
+        510.15625,
+        456.96875
       ],
       "flags": {},
       "order": 8,
@@ -767,8 +767,8 @@
       "id": 366,
       "type": "GetVideoComponents",
       "pos": [
-        461.2364300772081,
-        7574.178502896455
+        461.2363668763004,
+        7574.178444015828
       ],
       "size": [
         225,
