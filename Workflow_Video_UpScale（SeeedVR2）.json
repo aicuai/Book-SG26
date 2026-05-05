@@ -8,8 +8,8 @@
       "id": 2,
       "type": "SeedVR2LoadDiTModel",
       "pos": [
-        1502.7793978489208,
-        7920.847794865351
+        1502.7793885166452,
+        7920.847563656552
       ],
       "size": [
         317.5625,
@@ -36,9 +36,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "SeedVR2LoadDiTModel",
         "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "Node name for S&R": "SeedVR2LoadDiTModel",
         "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
@@ -55,11 +55,11 @@
       "id": 3,
       "type": "SeedVR2LoadVAEModel",
       "pos": [
-        1500.6783266819286,
-        8388.865383671502
+        1500.6783192295356,
+        8388.865416502316
       ],
       "size": [
-        321.796875,
+        321.765625,
         535.3125
       ],
       "flags": {},
@@ -83,9 +83,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "SeedVR2LoadVAEModel",
         "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "Node name for S&R": "SeedVR2LoadVAEModel",
         "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
@@ -106,12 +106,12 @@
       "id": 6,
       "type": "VHS_VideoCombine",
       "pos": [
-        2515.747410068159,
-        7783.599895022516
+        2515.7469212352485,
+        7783.600011564781
       ],
       "size": [
         610.1875,
-        793.71875
+        452.90625
       ],
       "flags": {},
       "order": 4,
@@ -149,9 +149,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VHS_VideoCombine",
         "cnr_id": "comfyui-videohelpersuite",
         "ver": "8e4d79471bf1952154768e8435a9300077b534fa",
-        "Node name for S&R": "VHS_VideoCombine",
         "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
         "ue_properties": {
           "widget_ue_connectable": {},
@@ -162,7 +162,7 @@
       "widgets_values": {
         "frame_rate": 24,
         "loop_count": 0,
-        "filename_prefix": "%date:yyyy-MM-dd%/SD2_R2V",
+        "filename_prefix": "%date:yyyy-MM-dd%/UpScale",
         "format": "video/h264-mp4",
         "pix_fmt": "yuv420p",
         "crf": 19,
@@ -191,12 +191,12 @@
       "id": 7,
       "type": "VHS_LoadVideo",
       "pos": [
-        1028.1381762302685,
-        7764.290675877313
+        1028.1381071483352,
+        7764.290623632957
       ],
       "size": [
-        410.640625,
-        548.0806658130603
+        410.625,
+        634.625
       ],
       "flags": {},
       "order": 2,
@@ -251,20 +251,20 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "VHS_LoadVideo",
         "cnr_id": "comfyui-videohelpersuite",
         "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
-        "Node name for S&R": "VHS_LoadVideo",
         "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite"
       },
       "widgets_values": {
-        "video": "Seedance 2_0 - Use _Image1 for Hibiki Mei_s full character appearance_ outfit_ hair_ face_ and color (1).mp4",
+        "video": "Seedance 20 - Use _Image1 for Hibiki Mei_s character design_ facial features_ hairstyle_ outfit_ an (1).mp4",
         "force_rate": 0,
         "custom_width": 0,
         "custom_height": 0,
         "frame_load_cap": 0,
         "skip_first_frames": 0,
         "select_every_nth": 1,
-        "format": "AnimateDiff",
+        "format": "None",
         "videopreview": {
           "hidden": false,
           "paused": false,
@@ -275,7 +275,7 @@
             "frame_load_cap": 0,
             "skip_first_frames": 0,
             "select_every_nth": 1,
-            "filename": "Seedance 2_0 - Use _Image1 for Hibiki Mei_s full character appearance_ outfit_ hair_ face_ and color (1).mp4",
+            "filename": "Seedance 20 - Use _Image1 for Hibiki Mei_s character design_ facial features_ hairstyle_ outfit_ an (1).mp4",
             "type": "input",
             "format": "video/mp4"
           }
@@ -286,12 +286,12 @@
       "id": 4,
       "type": "SeedVR2VideoUpscaler",
       "pos": [
-        1873.7057894504833,
-        7779.357080601435
+        1873.7057813938427,
+        7779.356929379971
       ],
       "size": [
-        588.828125,
-        670.921875
+        588.8125,
+        670.890625
       ],
       "flags": {},
       "order": 3,
@@ -341,17 +341,17 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "SeedVR2VideoUpscaler",
         "cnr_id": "seedvr2_videoupscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "Node name for S&R": "SeedVR2VideoUpscaler",
         "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
       },
       "widgets_values": [
-        4043388535,
+        2892305368,
         "randomize",
         1080,
         0,
-        17,
+        5,
         false,
         "lab",
         0,
@@ -409,10 +409,10 @@
   "config": {},
   "extra": {
     "ds": {
-      "scale": 0.6830134553650705,
+      "scale": 0.6209213230591556,
       "offset": [
-        -608.3602159641547,
-        -7600.222574296506
+        -837.7668615823176,
+        -7526.842661150485
       ]
     },
     "linearData": {
