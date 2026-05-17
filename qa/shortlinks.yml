@@ -1,0 +1,39 @@
+# Book-SG26 short URL registry
+#
+# Source of truth for j.aicu.ai shortlinks referenced by this book and its
+# companion materials. Consumed by qa/check_shortlinks.py (GitHub Actions
+# and the local Windows QA runner) to verify both reachability and that
+# each shortlink still resolves to its expected destination.
+#
+# Fields:
+#   code            short code path on j.aicu.ai
+#   url             full shortlink URL
+#   expect_contains substring required in the final (post-redirect) URL;
+#                   omit or leave empty to skip destination check
+#   description     human-readable purpose; shown in QA output
+#
+# When adding a new shortlink:
+#   1. Coordinate the j.aicu.ai backend issuance.
+#   2. Append an entry here.
+#   3. Reference it from README / book content.
+
+shortlinks:
+  - code: CSG
+    url: https://j.aicu.ai/CSG
+    expect_contains: note.com/aicu
+    description: 書籍シリーズ note.com 連載
+
+  - code: CSGC
+    url: https://j.aicu.ai/CSGC
+    expect_contains: ComfyUI.ipynb
+    description: ComfyUI Colab ノートブック（Cloudflare 版）
+
+  - code: CSGP
+    url: https://j.aicu.ai/CSGP
+    expect_contains: ComfyUI-pinggy.ipynb
+    description: ComfyUI Colab ノートブック（Pinggy 版）
+
+  - code: comfysb
+    url: https://j.aicu.ai/comfysb
+    expect_contains: amazon
+    description: 既刊『ComfyUI マスターガイド』

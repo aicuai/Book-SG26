@@ -40,27 +40,28 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 ## Google Colab での使い方
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/CSGC)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/CSGP)
 
-1. `ComfyUI-pinggy.ipynb` を [Google Colab で開く](https://j.aicu.ai/CSGC)
+1. `ComfyUI-pinggy.ipynb` を [Google Colab で開く](https://j.aicu.ai/CSGP)
 2. Civitai API キーを Colab のシークレットに `CIVITAI_KEY` として登録
 3. 必要なモデルの URL を各フォルダ欄に入力
 4. セルを実行して ComfyUI を起動
 
 詳しい手順は書籍本編およびノートブック内の説明をご参照ください。
 
-### Pinggy 版について
+### トンネル方式と推奨環境
 
-Pinggy 版（`ComfyUI-pinggy.ipynb`）は SSH トンネルを利用しており、Cloudflare 版と比較して以下の利点があります：
+本書では、Google Colab 上の ComfyUI をお手元のブラウザから WebUI として操作するために、外部公開トンネルを利用します。本リポジトリでは Cloudflare 方式と Pinggy 方式の 2 通りを用意しています。
 
-- ComfyUI の起動・再起動が高速（20秒〜1分）
-- 画像・動画のアップロードが安定
-- Wan2.2 等の重いワークフローが正常に完了
+| 方式 | ノートブック | セッション制限 |
+|------|------------|--------------|
+| Cloudflare | `ComfyUI.ipynb` | 制限なし（無料） |
+| Pinggy | `ComfyUI-pinggy.ipynb` | 1 セッション 60 分（無料枠の場合） |
 
-Pinggy は無料枠で **60分のセッション** が利用できます。セッション切れの場合はセルを再実行してください。
-Pinggy の詳細: https://pinggy.io/
+ご利用環境やワークフローの内容によって、応答速度や大きなファイルのやり取りの安定性が異なる場合があります。書籍本編で扱う Wan2.2 など、比較的負荷の高いワークフローを継続的に試す場合は、**Google Colab Pro と Pinggy の有料プランの併用**もご検討ください。より上位の GPU や長いセッション時間が選択できるようになります。
 
-> Cloudflare 版（`ComfyUI.ipynb`）も引き続き利用可能ですが、大きなペイロードを扱うワークフローでは不安定な場合があります。
+- Pinggy: https://pinggy.io/
+- Cloudflare Tunnel: https://www.cloudflare.com/products/tunnel/
 
 ## ワークフロー
 
@@ -114,14 +115,14 @@ python bench/bench_tunnel.py --compare results/
 
 ## 対応環境
 
-- Google Colab (T4 / L4 GPU)
-- ローカル ComfyUI Desktop
+- Google Colab（無料／Pro いずれも、エンドユーザーは Pinggy または Cloudflare トンネル経由で WebUI に接続）
+- ローカル ComfyUI Desktop（NVIDIA GPU 推奨）
 - SSH 接続環境（AICU サーバー等）
 
 ## 関連リンク
 
 - [書籍情報（SBクリエイティブ）](https://www.sbcr.jp/product/4815637675/)
-- [Google Colab ノートブック](https://j.aicu.ai/CSGC)
+- [Google Colab ノートブック](https://j.aicu.ai/CSGP)
 - [note.com 連載](https://j.aicu.ai/CSG)
 - [AICU media](https://ja.aicu.ai/)
 - [ComfyUI 公式](https://www.comfy.org/)
