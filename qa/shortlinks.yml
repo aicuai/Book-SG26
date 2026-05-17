@@ -25,12 +25,12 @@ shortlinks:
 
   - code: CSGC
     url: https://j.aicu.ai/CSGC
-    expect_contains: ComfyUI.ipynb
+    expect_contains: Notebooks/ComfyUI.ipynb
     description: ComfyUI Colab ノートブック（Cloudflare 版）
 
   - code: CSGP
     url: https://j.aicu.ai/CSGP
-    expect_contains: ComfyUI-pinggy.ipynb
+    expect_contains: Notebooks/ComfyUI_pinggy.ipynb
     description: ComfyUI Colab ノートブック（Pinggy 版）
 
   - code: comfysb

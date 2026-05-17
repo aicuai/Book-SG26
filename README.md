@@ -32,17 +32,21 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 | ファイル | 内容 |
 |---------|------|
-| `ComfyUI.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Cloudflare トンネル） |
-| `ComfyUI-pinggy.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Pinggy トンネル） |
-| `api-workflows/sdxl_txt2img.json` | SDXL 画像生成ワークフロー |
-| `api-workflows/wan22_t2v.json` | Wan2.2 テキストから動画生成ワークフロー |
+| `Notebooks/ComfyUI.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Cloudflare トンネル） |
+| `Notebooks/ComfyUI_pinggy.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Pinggy トンネル） |
+| `Notebooks/Stable_Diffusion_WebUI_Forge_classic.ipynb` | Stable Diffusion WebUI Forge classic 起動ノートブック |
+| `Notebooks/ComfyUI_Launch_Notebook_Wan2_2_I2V_v12.ipynb` | Wan2.2 I2V 用 ComfyUI 起動ノートブック |
+| `Notebooks/ComfyUI_Launch_Notebook_SD2_R2V_v15.ipynb` | SD2 R2V 用 ComfyUI 起動ノートブック |
+| `Workflows/` | ComfyUI UI で読み込むワークフロー JSON |
+| `Workflows/api/sdxl_txt2img.json` | SDXL 画像生成ワークフロー（API 形式） |
+| `Workflows/api/wan22_t2v.json` | Wan2.2 テキストから動画生成ワークフロー（API 形式） |
 | `bench/bench_tunnel.py` | トンネル方式ベンチマークスクリプト |
 
 ## Google Colab での使い方
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/CSGP)
 
-1. `ComfyUI-pinggy.ipynb` を [Google Colab で開く](https://j.aicu.ai/CSGP)
+1. `Notebooks/ComfyUI_pinggy.ipynb` を [Google Colab で開く](https://j.aicu.ai/CSGP)
 2. Civitai API キーを Colab のシークレットに `CIVITAI_KEY` として登録
 3. 必要なモデルの URL を各フォルダ欄に入力
 4. セルを実行して ComfyUI を起動
@@ -55,8 +59,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 | 方式 | ノートブック | セッション制限 |
 |------|------------|--------------|
-| Cloudflare | `ComfyUI.ipynb` | 制限なし（無料） |
-| Pinggy | `ComfyUI-pinggy.ipynb` | 1 セッション 60 分（無料枠の場合） |
+| Cloudflare | `Notebooks/ComfyUI.ipynb` | 制限なし（無料） |
+| Pinggy | `Notebooks/ComfyUI_pinggy.ipynb` | 1 セッション 60 分（無料枠の場合） |
 
 ご利用環境やワークフローの内容によって、応答速度や大きなファイルのやり取りの安定性が異なる場合があります。書籍本編で扱う Wan2.2 など、比較的負荷の高いワークフローを継続的に試す場合は、**Google Colab Pro と Pinggy の有料プランの併用**もご検討ください。より上位の GPU や長いセッション時間が選択できるようになります。
 
@@ -65,7 +69,7 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 ## ワークフロー
 
-`api-workflows/` ディレクトリに ComfyUI API 形式のワークフロー JSON を収録しています。
+`Workflows/api/` ディレクトリに ComfyUI API 形式のワークフロー JSON を収録しています。`Workflows/` 直下は ComfyUI の UI で読み込むワークフロー JSON です。
 
 | ワークフロー | 用途 | 必要モデル |
 |-------------|------|-----------|
