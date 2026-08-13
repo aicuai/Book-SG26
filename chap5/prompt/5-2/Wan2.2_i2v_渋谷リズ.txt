@@ -1,0 +1,5 @@
+﻿#Prompt
+The girl in the orange hoodie keeps walking forward while looking at her smartphone, with a calm and natural expression. Her long pink ponytail and loose hair strands sway gently with each step, and the orange hoodie and drawstrings move softly in the morning breeze. The camera slowly moves backward while tracking her from the front, keeping her centered as the busy city street flows behind her. Subtle morning sunlight flickers across her face, clothes, and legs, creating a peaceful everyday atmosphere in a lively urban street.
+
+#Negativeprompt
+static image, no walking, frozen pose, motionless background, stiff body, face distortion, deformed eyes, flickering face, unstable facial features, extra limbs, extra fingers, bad hands, warped phone, changing outfit, changing hairstyle, inconsistent character, jitter, shaking camera, heavy blur, ghosting, duplicated body, unnatural leg movement, sliding feet, broken anatomy, background melting, sudden scene change, text, watermark, logo
