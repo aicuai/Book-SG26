@@ -1,0 +1,5 @@
+﻿#Prompt
+A young girl with long light-blue twin-tails is seen from behind, then she quickly spins around to face the camera with a lively, energetic turn. As she rotates, her twin-tails, black ribbons, and frilled white dress sway widely and naturally with the motion. She lands in a front-facing pose, closes her eyes, shows a big cheerful smile, and raises both hands in a bright double peace sign, keeping the same hairstyle, outfit, and gentle character identity. The camera stays almost fixed with only a slight push-in, and the soft clean lighting creates a pure, cute, warm, and happy feeling.
+
+#Negativeprompt
+identity change, different person, face distortion, inconsistent face, unstable eyes, hairstyle change, twin-tail shape change, outfit change, extra accessories, added background elements, background distortion, flicker, frame inconsistency, jitter, ghosting, warped body, bad anatomy, aggressive camera movement, strong zoom, camera shake, blur

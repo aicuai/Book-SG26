@@ -1,0 +1,2 @@
+#Negativeprompt
+flickering, jittering, facedeformation, distorted anatomy, changing identity, blurry, low quality
