@@ -18,6 +18,17 @@
 
 ComfyUI を使った画像・動画生成のワークフロー、テンプレート、Google Colab ノートブックを提供しています。
 
+## この本で作れるもの
+
+[![サンプル動画を再生](images/chap5_r2v_poster.jpg)](prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4)
+
+**▶️ [「リズメイの待ち合わせ」を再生する](prompts/chap5/Seedance2.0_R2V%E2%80%97Movie_720p_SAMPLE.mp4)**（15秒 / 音声あり）
+
+オリジナルキャラクター「響姫メイ」と「渋谷リズ」が渋谷で待ち合わせる15秒のCM風動画です。
+キャラクター設定 → シナリオ → イメージボード → 動画生成までを、**本書の手順どおりに作れます**。
+
+この動画を作るのに使ったプロンプトは [第5章のプロンプト集](prompts/chap5/)（https://j.aicu.ai/SG26c5 ）で全文公開しています。
+
 ## 書籍情報
 
 - **発売日**: 2026年9月19日（土）
@@ -73,6 +84,7 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 | https://j.aicu.ai/SG26C | ComfyUI 起動ノートブックを **Google Colab で開く** |
 | https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック（GitHub 上のファイル） |
 | https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック |
+| https://j.aicu.ai/SG26c5 | 第5章のプロンプト集（サンプル動画つき） |
 | https://j.aicu.ai/CSG | note.com 連載 |
 | https://j.aicu.ai/SG26A | Amazon の書籍ページ |
 
@@ -96,6 +108,11 @@ ComfyUI の画面を Colab の外から開くために、トンネルを経由�
 |---|---|
 | **Pinggy** | 起動・再起動が高速（20秒〜1分）。画像・動画のアップロードが安定し、Wan2.2 等の重いワークフローが完走しやすい。無料枠は **60分**（切れたらセルを再実行） |
 | **Cloudflare** | 時間制限なし。ただし大きなペイロードを扱うワークフローでは不安定な場合があります |
+
+Pinggy を使うと、URL を開いたときに次の確認画面が表示されます。
+**赤い「Enter site」ボタン**をクリックすると ComfyUI が開きます（初回のみ）。
+
+<img src="images/pinggy_enter_site.png" alt="Pinggy の確認画面。赤い Enter site ボタンをクリックする" width="420">
 
 Pinggy の詳細: https://pinggy.io/
 
