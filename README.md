@@ -72,6 +72,7 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 |---|---|
 | https://j.aicu.ai/SG26C | ComfyUI 起動ノートブックを **Google Colab で開く** |
 | https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック（GitHub 上のファイル） |
+| https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック |
 | https://j.aicu.ai/CSG | note.com 連載 |
 | https://j.aicu.ai/SG26A | Amazon の書籍ページ |
 
