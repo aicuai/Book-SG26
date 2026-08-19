@@ -10,8 +10,9 @@
 さらに、クラウドコンピューティング（Google Colab）を使った画像生成環境を利用することで、
 インターネット環境さえあれば画像や動画を生成できる方法も解説します。
 
-<!-- 書影: images/cover.png を配置してください（未配置のため現在は非表示） -->
-<img src="images/cover.png" alt="【キャラクターを創り動かす】画像・動画生成AI スタートガイド 書影" width="280" align="right">
+<a href="https://www.sbcr.jp/product/4815637675/">
+<img src="images/SG26.png" alt="【キャラクターを創り動かす】画像・動画生成AI スタートガイド 書影" width="280" align="right">
+</a>
 
 本リポジトリは、SBクリエイティブより発売の書籍『**【キャラクターを創り動かす】画像・動画生成AI スタートガイド**』の公式サポートコンテンツです。
 
@@ -38,60 +39,98 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 - 第6章　生成AIとの向き合い方を考えよう
 - 第7章　生成AIと共に歩んでいこう
 
-## ディレクトリ構成の変更(出版前)
+## ディレクトリ構成
 
-以下のディレクトリを書籍内の固定ディレクトリとします
+書籍内で参照する固定ディレクトリです。
 
-- ipynb :Google Colab Noterbook (forge, ComfyUI各種)
-- prompts
-- workflow
-- api-workflow
-- images: 各ワークフローで参照する参照画像
+| ディレクトリ | 内容 |
+|---|---|
+| [`ipynb/`](ipynb/) | Google Colab 用ノートブック（ComfyUI / Forge / LoRA 学習） |
+| [`prompts/`](prompts/) | 章ごとのプロンプト素材 |
+| [`workflow/`](workflow/) | ComfyUI ワークフロー JSON（UI 形式） |
+| [`api-workflows/`](api-workflows/) | ComfyUI ワークフロー JSON（API 形式） |
+| [`WebUI_Launch_Setup_Files/`](WebUI_Launch_Setup_Files/) | ノートブックが自動取得するサンプル画像・設定ファイル |
+| [`images/`](images/) | 書影等 |
+| [`bench/`](bench/) | トンネル速度ベンチマーク |
 
-### コンテンツ(旧構成)
+### 主なコンテンツ
 
 | ファイル | 内容 |
 |---------|------|
-| `ComfyUI.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Cloudflare トンネル） |
-| `ComfyUI-pinggy.ipynb` | Google Colab 用 ComfyUI 起動ノートブック（Pinggy トンネル） |
-| `api-workflows/sdxl_txt2img.json` | SDXL 画像生成ワークフロー |
-| `api-workflows/wan22_t2v.json` | Wan2.2 テキストから動画生成ワークフロー |
-| `bench/bench_tunnel.py` | トンネル方式ベンチマークスクリプト |
+| [`ipynb/ComfyUI.ipynb`](ipynb/ComfyUI.ipynb) | **ComfyUI 起動ノートブック（LTS）** |
+| [`ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb`](ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb) | Forge (WebUI) 起動ノートブック |
+| [`ipynb/SG26-LoRA-KohyaTrainer.ipynb`](ipynb/SG26-LoRA-KohyaTrainer.ipynb) | LoRA 学習ノートブック |
+| [`prompts/chap5/README.md`](prompts/chap5/README.md) | 第5章のプロンプト全文（動画サンプル付き） |
+| [`bench/bench_tunnel.py`](bench/bench_tunnel.py) | トンネル方式ベンチマークスクリプト |
+
+## 短縮URL
+
+書籍紙面の QR コードはこの短縮URLを指しています。リポジトリ構成が変わっても、
+短縮URLの転送先を付け替えることで**リンクは維持されます**。
+
+| 短縮URL | 転送先 |
+|---|---|
+| https://j.aicu.ai/SG26C | ComfyUI 起動ノートブックを **Google Colab で開く** |
+| https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック（GitHub 上のファイル） |
+| https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック |
+| https://j.aicu.ai/CSG | note.com 連載 |
+| https://j.aicu.ai/SG26A | Amazon の書籍ページ |
 
 ## Google Colab での使い方
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/CSGC)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/SG26C)
 
-1. `ComfyUI-pinggy.ipynb` を [Google Colab で開く](https://j.aicu.ai/CSGC)
-2. Civitai API キーを Colab のシークレットに `CIVITAI_KEY` として登録
-3. 必要なモデルの URL を各フォルダ欄に入力
-4. セルを実行して ComfyUI を起動
+1. [`ipynb/ComfyUI.ipynb` を Google Colab で開く](https://j.aicu.ai/SG26C)
+2. **ファイル → ドライブにコピーを保存**（そのままでは編集内容を保存できません）
+3. Civitai API キーを Colab のシークレットに `CIVITAI_KEY` として登録
+4. 必要なモデルの URL を各フォルダ欄に入力
+5. セルを実行して ComfyUI を起動
 
 詳しい手順は書籍本編およびノートブック内の説明をご参照ください。
 
-### Pinggy 版について
+### トンネルについて
 
-Pinggy 版（`ComfyUI-pinggy.ipynb`）は SSH トンネルを利用しており、Cloudflare 版と比較して以下の利点があります：
+ComfyUI の画面を Colab の外から開くために、トンネルを経由します。
 
-- ComfyUI の起動・再起動が高速（20秒〜1分）
-- 画像・動画のアップロードが安定
-- Wan2.2 等の重いワークフローが正常に完了
+| 方式 | 特徴 |
+|---|---|
+| **Pinggy** | 起動・再起動が高速（20秒〜1分）。画像・動画のアップロードが安定し、Wan2.2 等の重いワークフローが完走しやすい。無料枠は **60分**（切れたらセルを再実行） |
+| **Cloudflare** | 時間制限なし。ただし大きなペイロードを扱うワークフローでは不安定な場合があります |
 
-Pinggy は無料枠で **60分のセッション** が利用できます。セッション切れの場合はセルを再実行してください。
 Pinggy の詳細: https://pinggy.io/
-
-> Cloudflare 版（`ComfyUI.ipynb`）も引き続き利用可能ですが、大きなペイロードを扱うワークフローでは不安定な場合があります。
 
 ## ワークフロー
 
-`api-workflows/` ディレクトリに ComfyUI API 形式のワークフロー JSON を収録しています。
+| ディレクトリ | 形式 | 読み込み方 |
+|---|---|---|
+| [`workflow/`](workflow/) | UI 形式 | ComfyUI 画面にドラッグ＆ドロップ |
+| [`api-workflows/`](api-workflows/) | API 形式 | 「Load API workflow」から読み込み |
+
+### `workflow/` — 書籍で使用するワークフロー
+
+| ワークフロー | 対応する節 | 必要モデル |
+|---|---|---|
+| `SG26_wan2_2_14B_I2V‗GGUF.json` | 5-2 画像から動画 | Wan2.2 I2V A14B (GGUF) + UMT5-XXL + Wan2.1 VAE |
+| `SG26_wan2_2_14B_FLF2V‗GGUF.json` | 5-3 開始・終了画像から動画 | 同上（I2V と共通） |
+| `WorkFlow_api_seedance2_R2V.json` | 5-4 シナリオから動画 | comfy.org API ノード + SeedVR2 |
+| `Workflow_Video_UpScale（SeeedVR2）.json` | 動画のアップスケール | SeedVR2 |
+
+### `api-workflows/` — 軽量な検証用
 
 | ワークフロー | 用途 | 必要モデル |
 |-------------|------|-----------|
 | `sdxl_txt2img.json` | SDXL 画像生成（軽量テスト用） | Sierunami.v1 checkpoint |
 | `wan22_t2v.json` | Wan2.2 テキスト→動画（重量テスト用） | Wan2.2 T2V 14B + UMT5-XXL + Wan2.2 VAE |
 
-ワークフローは ComfyUI の「Load API workflow」で読み込めます。モデルのダウンロード URL はノートブック内のメモセルを参照してください。
+モデルのダウンロード URL はノートブック内のメモセルを参照してください。
+
+## プロンプト素材
+
+書籍で使用した生成AIプロンプトを全文公開しています。
+
+| | 内容 |
+|---|---|
+| [第5章](prompts/chap5/) | Wan2.2 I2V / FLF2V、Seedance 2.0 R2V のプロンプト15点とサンプル動画 |
 
 ## ベンチマーク（トンネル速度比較）
 
@@ -141,7 +180,7 @@ python bench/bench_tunnel.py --compare results/
 ## 関連リンク
 
 - [書籍情報（SBクリエイティブ）](https://www.sbcr.jp/product/4815637675/)
-- [Google Colab ノートブック](https://j.aicu.ai/CSGC)
+- [ComfyUI 起動ノートブックを Colab で開く](https://j.aicu.ai/SG26C)
 - [note.com 連載](https://j.aicu.ai/CSG)
 - [AICU media](https://ja.aicu.ai/)
 - [ComfyUI 公式](https://www.comfy.org/)
