@@ -127,10 +127,10 @@ Pinggy の詳細: https://pinggy.io/
 
 | ワークフロー | 対応する節 | 必要モデル |
 |---|---|---|
-| `SG26_wan2_2_14B_I2V‗GGUF.json` | 5-2 画像から動画 | Wan2.2 I2V A14B (GGUF) + UMT5-XXL + Wan2.1 VAE |
-| `SG26_wan2_2_14B_FLF2V‗GGUF.json` | 5-3 開始・終了画像から動画 | 同上（I2V と共通） |
+| `SG26Wan22-14B-I2V-GGUF.json` | 5-2 画像から動画 | Wan2.2 I2V A14B (GGUF) + UMT5-XXL + Wan2.1 VAE |
+| `SG26Wan22-14B-FLF2V-GGUF.json` | 5-3 開始・終了画像から動画 | 同上（I2V と共通） |
 | `WorkFlow_api_seedance2_R2V.json` | 5-4 シナリオから動画 | comfy.org API ノード + SeedVR2 |
-| `Workflow_Video_UpScale（SeeedVR2）.json` | 動画のアップスケール | SeedVR2 |
+| `VideoUpScaleSeedVR2.json` | 動画のアップスケール | SeedVR2 |
 
 ### `api-workflows/` — 軽量な検証用
 
