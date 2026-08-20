@@ -81,12 +81,21 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 | 短縮URL | 転送先 |
 |---|---|
+| https://j.aicu.ai/SG26A | **書籍を購入する**（Amazon） |
+| https://j.aicu.ai/SG26CW | ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（5-2 / 5-3） |
 | https://j.aicu.ai/SG26C | ComfyUI 起動ノートブックを **Google Colab で開く** |
 | https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック（GitHub 上のファイル） |
-| https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック |
+| https://j.aicu.ai/CSGF | Forge Classic 起動ノートブック（2-5） |
+| https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック（3-11） |
+| https://j.aicu.ai/SG26Wan | Wan2.2 I2V ワークフロー（5-2） |
+| https://j.aicu.ai/SG26WanF | Wan2.2 FLF2V ワークフロー（5-3） |
+| https://j.aicu.ai/SG26R2V | Seedance 2.0 R2V ワークフロー（5-4） |
+| https://j.aicu.ai/SG26US | SeedVR2 アップスケールワークフロー（5-4） |
 | https://j.aicu.ai/SG26c5 | 第5章のプロンプト集（サンプル動画つき） |
 | https://j.aicu.ai/CSG | note.com 連載 |
-| https://j.aicu.ai/SG26A | Amazon の書籍ページ |
+
+この表は [`qa/shortlinks.yml`](qa/shortlinks.yml) が正本で、毎週の QA で転送先まで自動検査しています。
+**短縮URLの発行・付け替えは人が行います**（自動化していません）。
 
 ## Google Colab での使い方
 
@@ -221,6 +230,78 @@ python bench/bench_tunnel.py --compare results/
 | [AICU/ComfyLTS](https://huggingface.co/AICU/ComfyLTS) | ControlNet モデル |
 | [aicuai/Book-StartGuideSDXL](https://github.com/aicuai/Book-StartGuideSDXL) | 前作（SDXL・黄色本） |
 
+## 本書・本リポジトリを引用するとき
+
+研究・記事・教材で本書やこのリポジトリの内容を参照する場合、出典を示していただければ
+許諾の申請は不要です。**引用の範囲を超える転載（章まるごと・図版の再配布）は
+[SBクリエイティブ](https://www.sbcr.jp/)にお問い合わせください。**
+
+### 書誌情報
+
+| 項目 | 値 |
+|---|---|
+| 書名 | 【キャラクターを創り動かす】画像・動画生成AI スタートガイド |
+| 著者 | AICU media 編集部、白井 暁彦、道草 雑草子 |
+| 出版社 | SBクリエイティブ |
+| 発行 | 2026年9月19日 |
+| ISBN | 978-4-8156-3767-5 |
+| 判型・頁 | B5判 / 272ページ |
+| 書籍ページ | https://www.sbcr.jp/product/4815637675/ |
+| 購入（Amazon） | https://j.aicu.ai/SG26A |
+| サポートリポジトリ | https://github.com/aicuai/Book-SG26 |
+
+### 文中での書き方
+
+> AICU media 編集部・白井暁彦・道草雑草子『【キャラクターを創り動かす】画像・動画生成AI スタートガイド』SBクリエイティブ, 2026, ISBN 978-4-8156-3767-5.
+
+このリポジトリのワークフローやプロンプトを使った場合は、あわせて
+`https://github.com/aicuai/Book-SG26` を併記してください。
+
+### BibTeX
+
+日本語フィールドをそのまま使う場合（`upLaTeX` / `LuaLaTeX` + `pBibTeX` 等）:
+
+```bibtex
+@book{aicu2026startguide,
+  author    = {AICU media 編集部 and 白井 暁彦 and 道草 雑草子},
+  title     = {【キャラクターを創り動かす】画像・動画生成AI スタートガイド},
+  publisher = {SBクリエイティブ},
+  year      = {2026},
+  month     = {9},
+  isbn      = {978-4-8156-3767-5},
+  pages     = {272},
+  url       = {https://www.sbcr.jp/product/4815637675/},
+  note      = {サポートリポジトリ: \url{https://github.com/aicuai/Book-SG26}}
+}
+```
+
+ASCII のみの処理系向け（英語論文で引用する場合）:
+
+```bibtex
+@book{aicu2026startguide_en,
+  author    = {{AICU media Editorial Department} and Shirai, Akihiko and Michikusa, Zasuko},
+  title     = {Start Guide to Image and Video Generative {AI}: Create and Animate Your Own Characters},
+  publisher = {SB Creative},
+  address   = {Tokyo, Japan},
+  year      = {2026},
+  month     = {9},
+  isbn      = {978-4-8156-3767-5},
+  pages     = {272},
+  language  = {japanese},
+  url       = {https://www.sbcr.jp/product/4815637675/},
+  note      = {In Japanese. Support repository: \url{https://github.com/aicuai/Book-SG26}}
+}
+```
+
+> 英題は本書の内容を説明するための便宜的な訳で、公式の英語版書名ではありません。
+
+### 生成した作品を発表するとき
+
+本書の手順で作った画像・動画は**あなたのもの**です。出典表記の義務はありません。
+「この本で作りました」と添えていただけると励みになります（[#SG26](https://x.com/hashtag/SG26)）。
+
+ただし**モデルごとに再配布条件が異なります**。下の[ライセンス](#ライセンス)をご確認ください。
+
 ## ライセンス
 
 本リポジトリのワークフロー JSON・プロンプト素材・ノートブックは自由にご利用いただけます。
@@ -257,6 +338,7 @@ python bench/bench_tunnel.py --compare results/
 | [Sierunami](https://civitai.com/models/1048343) | [Illustrious License](https://freedevproject.org/faipl-1.0-sd/)（FAIPL 1.0-SD） |
 | [Flying Effect (Wan2.1 I2V LoRA)](https://civitai.com/models/1348626) | Civitai（`Image` `RentCivit` `Rent` `Sell`） |
 | [Flow Camera](https://civitai.com/models/1903906) | Civitai（`Image` `RentCivit` `Rent` `Sell`） |
+| Seedance 2.0（5-4 / ByteDance）| オープンライセンスではなく **API 提供者の利用規約**。下記参照 |
 
 ### 生成した画像について
 
@@ -267,6 +349,14 @@ python bench/bench_tunnel.py --compare results/
 
 Sierunami・mellow_pencil-XL で作った画像は、**あなたのものです。**
 販売・作品公開に制限はかかりません。
+
+**Seedance 2.0（5-4）だけは性格が違います。** これは ComfyUI の API ノード経由で
+ByteDance のサービスを呼び出すもので、オープンライセンスではありません。
+[Comfy の利用規約](https://www.comfy.org/terms-of-service)は出力の権利を利用者が保持すると定め、
+Partner Node は各提供者の規約に従うとしています。ByteDance 側も出力の知的財産権を主張しませんが、
+**「生成できること」は「公開してよいこと」を意味しません。**
+既存のキャラクター・実在人物に似た出力になっていないか、公開前にご自身で確認してください。
+オリジナルキャラクターを使い、権利者の了解が取れているものであれば問題ありません。
 
 ### モデルを再配布するとき
 
