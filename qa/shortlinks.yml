@@ -1,0 +1,66 @@
+# Book-SG26 short URL registry
+#
+# Source of truth for j.aicu.ai shortlinks referenced by this book and its
+# companion materials. Consumed by qa/check_shortlinks.py (GitHub Actions
+# and the local Windows QA runner) to verify both reachability and that
+# each shortlink still resolves to its expected destination.
+#
+# Fields:
+#   code            short code path on j.aicu.ai
+#   url             full shortlink URL
+#   expect_contains substring required in the final (post-redirect) URL;
+#                   omit or leave empty to skip destination check
+#   description     human-readable purpose; shown in QA output
+#
+# When adding a new shortlink:
+#   1. Coordinate the j.aicu.ai backend issuance.
+#   2. Append an entry here.
+#   3. Reference it from README / book content.
+
+shortlinks:
+#   4. Run `python qa/check_shortlinks.py` before pushing.
+
+shortlinks:
+  - code: SG26C
+    url: https://j.aicu.ai/SG26C
+    expect_contains: colab.research.google.com
+    description: ComfyUI 起動ノートブックを Colab で開く（書籍 第5章）
+  - code: CSGC
+    url: https://j.aicu.ai/CSGC
+    expect_contains: ipynb/ComfyUI.ipynb
+    description: ComfyUI 起動ノートブック（GitHub 表示）
+  - code: CSGF
+    url: https://j.aicu.ai/CSGF
+    expect_contains: ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb
+    description: Forge Classic 起動ノートブック（書籍 2-5）
+  - code: SG26LoRA
+    url: https://j.aicu.ai/SG26LoRA
+    expect_contains: ipynb/SG26-LoRA-KohyaTrainer.ipynb
+    description: LoRA 学習ノートブック（書籍 3-11）
+  - code: SG26c5
+    url: https://j.aicu.ai/SG26c5
+    expect_contains: prompts/chap5
+    description: 第5章のプロンプト素材
+  - code: SG26Wan
+    url: https://j.aicu.ai/SG26Wan
+    expect_contains: workflow/SG26Wan22-14B-I2V-GGUF.json
+    description: Wan2.2 I2V ワークフロー（書籍 5-2）
+  - code: SG26WanF
+    url: https://j.aicu.ai/SG26WanF
+    expect_contains: workflow/SG26Wan22-14B-FLF2V-GGUF.json
+    description: Wan2.2 FLF2V ワークフロー（書籍 5-3）
+  - code: SG26R2V
+    url: https://j.aicu.ai/SG26R2V
+    expect_contains: workflow/WorkFlow_api_seedance2_R2V.json
+    description: Seedance2.0 R2V ワークフロー（書籍 5-4）
+  - code: SG26US
+    url: https://j.aicu.ai/SG26US
+    expect_contains: workflow/VideoUpScaleSeedVR2.json
+    description: SeedVR2 アップスケールワークフロー（書籍 5-4）
+  - code: SG26A
+    url: https://j.aicu.ai/SG26A
+    description: Amazon 予約ページ（転送先は変動するため中身は見ない）
+  - code: CSG
+    url: https://j.aicu.ai/CSG
+    expect_contains: note.com
+    description: note 連載
