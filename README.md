@@ -127,10 +127,10 @@ Pinggy の詳細: https://pinggy.io/
 
 | ワークフロー | 対応する節 | 必要モデル |
 |---|---|---|
-| `SG26_wan2_2_14B_I2V‗GGUF.json` | 5-2 画像から動画 | Wan2.2 I2V A14B (GGUF) + UMT5-XXL + Wan2.1 VAE |
-| `SG26_wan2_2_14B_FLF2V‗GGUF.json` | 5-3 開始・終了画像から動画 | 同上（I2V と共通） |
+| `SG26Wan22-14B-I2V-GGUF.json` | 5-2 画像から動画 | Wan2.2 I2V A14B (GGUF) + UMT5-XXL + Wan2.1 VAE |
+| `SG26Wan22-14B-FLF2V-GGUF.json` | 5-3 開始・終了画像から動画 | 同上（I2V と共通） |
 | `WorkFlow_api_seedance2_R2V.json` | 5-4 シナリオから動画 | comfy.org API ノード + SeedVR2 |
-| `Workflow_Video_UpScale（SeeedVR2）.json` | 動画のアップスケール | SeedVR2 |
+| `VideoUpScaleSeedVR2.json` | 動画のアップスケール | SeedVR2 |
 
 ### `api-workflows/` — 軽量な検証用
 
@@ -209,10 +209,106 @@ python bench/bench_tunnel.py --compare results/
 - [画像生成AI Stable Diffusion スタートガイド](https://github.com/aicuai/Book-StartGuideSDXL)（SDXL対応・第3刷）
 - [ComfyUI マスターガイド](https://j.aicu.ai/comfysb)
 
+## 関連リポジトリ
+
+書籍のサポートは複数のリポジトリに分かれています。
+
+| リポジトリ | 役割 |
+|---|---|
+| **[aicuai/Book-SG26](https://github.com/aicuai/Book-SG26)**（本リポジトリ） | ノートブック・ワークフロー・プロンプト素材 |
+| [aicuai/ComfyLTS](https://github.com/aicuai/ComfyLTS) | 動作確認済みバージョンの固定台帳（LTS ライン） |
+| [AICU/SDXL-LoRA](https://huggingface.co/AICU/SDXL-LoRA) | 学習用データセットと LoRA |
+| [AICU/ComfyLTS](https://huggingface.co/AICU/ComfyLTS) | ControlNet モデル |
+| [aicuai/Book-StartGuideSDXL](https://github.com/aicuai/Book-StartGuideSDXL) | 前作（SDXL・黄色本） |
+
 ## ライセンス
 
-書籍連動コンテンツです。ワークフロー JSON は自由にご利用いただけます。
-ノートブック原作：ざすこ（道草 雑草子）
+本リポジトリのワークフロー JSON・プロンプト素材・ノートブックは自由にご利用いただけます。
+
+**ただし、これらが呼び出すソフトウェアとモデルには、それぞれ別のライセンスがあります。**
+とくに**生成した画像の商用利用**と**モデル自体の再配布**は条件が異なるので、
+下表をご確認ください（2026-08-20 時点の実査）。
+
+### ソフトウェア
+
+| 対象 | ライセンス |
+|---|---|
+| [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | GPL-3.0 |
+| [ComfyUI_GGUF](https://github.com/Isi-dev/ComfyUI_GGUF) | Apache-2.0 |
+| [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Apache-2.0 |
+| [rgthree-comfy](https://github.com/rgthree/rgthree-comfy) | MIT |
+| [ComfyUI_essentials](https://github.com/cubiq/ComfyUI_essentials) | MIT |
+| [ComfyUI-Frame-Interpolation](https://github.com/Fannovel16/ComfyUI-Frame-Interpolation) | MIT |
+| [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) | GPL-3.0 |
+| [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) | GPL-3.0 |
+| [ComfyUI-VFI](https://github.com/GACLove/ComfyUI-VFI) | 記載なし |
+| [ComfyUI-PainterI2V](https://github.com/princepainter/ComfyUI-PainterI2V) | 記載なし |
+| [ComfyUI-LogicUtils](https://github.com/aria1th/ComfyUI-LogicUtils) | 記載なし |
+
+### モデル
+
+| 対象 | ライセンス |
+|---|---|
+| [Wan2.2 / Wan2.1 ComfyUI Repackaged](https://huggingface.co/Comfy-Org/Wan_2.2_ComfyUI_Repackaged) | Apache-2.0 |
+| [Wan2.2-I2V / T2V-A14B-GGUF](https://huggingface.co/QuantStack/Wan2.2-I2V-A14B-GGUF) | Apache-2.0 |
+| [stabilityai/sdxl-vae](https://huggingface.co/stabilityai/sdxl-vae) | MIT |
+| [Kijai/WanVideo_comfy](https://huggingface.co/Kijai/WanVideo_comfy) | 記載なし（上流 Wan-AI は Apache-2.0） |
+| [mellow_pencil-XL](https://huggingface.co/bluepen5805/mellow_pencil-XL) | [Fair AI Public License 1.0-SD](https://freedevproject.org/faipl-1.0-sd/) |
+| [Sierunami](https://civitai.com/models/1048343) | [Illustrious License](https://freedevproject.org/faipl-1.0-sd/)（FAIPL 1.0-SD） |
+| [Flying Effect (Wan2.1 I2V LoRA)](https://civitai.com/models/1348626) | Civitai（`Image` `RentCivit` `Rent` `Sell`） |
+| [Flow Camera](https://civitai.com/models/1903906) | Civitai（`Image` `RentCivit` `Rent` `Sell`） |
+
+### 生成した画像について
+
+**Fair AI Public License 1.0-SD は、生成物をライセンスの対象外としています。**
+
+> The output of this software is not covered by this license,
+> and no contributor claims any rights to it.
+
+Sierunami・mellow_pencil-XL で作った画像は、**あなたのものです。**
+販売・作品公開に制限はかかりません。
+
+### モデルを再配布するとき
+
+**モデルファイル自体を配り直す場合は、条件が変わります。**
+
+- **Sierunami** — 作者が「Do not reprint this model」と明記しています。
+  マージや共有は可能ですが、**派生物の商用利用（生成サービス・受注モデル等）はできません**
+- **FAIPL 1.0-SD はコピーレフト**です。派生物は同じ自由度を保つライセンスで公開する必要があります
+- Civitai のモデルは `Sell` フラグがあるものだけ再配布できます
+
+読者が自分の環境で使う分には、これらの制限は関係ありません。
+
+## 謝辞
+
+本書とこのリポジトリは、多くの方の仕事の上に成り立っています。
+
+**ノートブック原作・動作検証**
+ざすこ（[道草 雑草子](https://x.com/zasuko_michiksa)）— Colab 起動ノートブックの設計と、
+全経路の実機確認をご担当いただきました。
+
+**モデル・カスタムノードの作者のみなさま**
+[Ocean3](https://civitai.com/user/Ocean3)（Sierunami）/
+[Y_AI_N](https://civitai.com/models/1348626)（Flying Effect）/
+[Nul_samx](https://civitai.com/models/1903906)（Flow Camera）/
+[bluepen5805](https://huggingface.co/bluepen5805)（mellow_pencil-XL）/
+[Kijai](https://github.com/kijai) / [Kosinkadink](https://github.com/Kosinkadink) /
+[cubiq](https://github.com/cubiq) / [rgthree](https://github.com/rgthree) /
+[Fannovel16](https://github.com/Fannovel16) / [Isi-dev](https://github.com/Isi-dev) /
+[numz](https://github.com/numz) / [aria1th](https://github.com/aria1th) /
+[GACLove](https://github.com/GACLove) / [princepainter](https://github.com/princepainter)
+
+**上流プロジェクト**
+[ComfyUI](https://github.com/comfyanonymous/ComfyUI)（comfyanonymous 氏と貢献者のみなさま）/
+[Comfy-Org](https://huggingface.co/Comfy-Org) / [QuantStack](https://huggingface.co/QuantStack) /
+[Wan-AI](https://huggingface.co/Wan-AI) / [Stability AI](https://huggingface.co/stabilityai) /
+[Pinggy](https://pinggy.io/) / [Cloudflare](https://www.cloudflare.com/)
+
+**QA レビュアーのみなさま**
+発売前の原稿を読み、誤りと分かりにくさを指摘してくださった読者レビュアーのみなさまに感謝します。
+
+**編集**
+SBクリエイティブ 編集部
 
 ## Issues
 
