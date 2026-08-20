@@ -17,10 +17,18 @@
 #   2. Append an entry here.
 #   3. Reference it from README / book content.
 
-shortlinks:
 #   4. Run `python qa/check_shortlinks.py` before pushing.
+#
+#   bot_protected   set true for destinations that rate-limit or bot-block
+#                   automated clients (e.g. Amazon returns 503 to CI runners).
+#                   403/503 are then treated as reachable-but-unverified
+#                   instead of failing the build.
 
 shortlinks:
+  - code: SG26CW
+    url: https://j.aicu.ai/SG26CW
+    expect_contains: ipynb/SG26-ComfyUI-Wan22.ipynb
+    description: ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（書籍 5-2 / 5-3）
   - code: SG26C
     url: https://j.aicu.ai/SG26C
     expect_contains: colab.research.google.com
@@ -59,7 +67,8 @@ shortlinks:
     description: SeedVR2 アップスケールワークフロー（書籍 5-4）
   - code: SG26A
     url: https://j.aicu.ai/SG26A
-    description: Amazon 予約ページ（転送先は変動するため中身は見ない）
+    bot_protected: true
+    description: Amazon 書籍ページ（アフィリエイトIDが変わるため中身は見ない）
   - code: CSG
     url: https://j.aicu.ai/CSG
     expect_contains: note.com

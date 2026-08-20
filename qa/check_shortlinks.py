@@ -5,6 +5,11 @@ For each entry, verifies:
   1. Reachability (HTTP < 400 after following redirects)
   2. Destination match (final URL contains `expect_contains`, if set)
 
+Entries marked `bot_protected: true` accept 403/503 as reachable. Amazon and
+similar sites block CI runners by IP, and a false QA failure files a noisy
+issue. The shortlink itself is still exercised — only the destination's
+refusal to answer a robot is tolerated.
+
 Shared between GitHub Actions (.github/workflows/qa.yml) and the local
 Windows QA runner (qa/qa_local.ps1). Requires PyYAML.
 
@@ -62,14 +67,18 @@ def main() -> int:
         url = entry["url"]
         expect = (entry.get("expect_contains") or "").strip()
         description = entry.get("description", "")
+        bot_protected = bool(entry.get("bot_protected"))
 
         status, dest = check(url)
         reachable = 200 <= status < 400
+        if not reachable and bot_protected and status in (403, 429, 503):
+            reachable = True
+            expect = ""  # destination refused to answer; nothing to match against
         destination_ok = (expect.lower() in dest.lower()) if (reachable and expect) else reachable
 
         if reachable and destination_ok:
             marker = "ok  "
-            note = ""
+            note = "  [bot-blocked; reachability only]" if status in (403, 429, 503) else ""
         elif reachable and not destination_ok:
             marker = "FAIL"
             note = f"  [expected substring '{expect}' not in final URL]"
