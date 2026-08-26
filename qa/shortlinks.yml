@@ -31,11 +31,13 @@ shortlinks:
     description: ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（書籍 5-2 / 5-3）
   - code: SG26P
     url: https://j.aicu.ai/SG26P
-    expect_contains: ipynb/ComfyUI-pinggy.ipynb
+    # ホストまで含めて検査する。github.com のファイル表示に差し替わると
+    # 読者は「ソースが見えるだけで起動できない」状態になるため。
+    expect_contains: colab.research.google.com/github/aicuai/Book-SG26/blob/main/ipynb/ComfyUI-pinggy.ipynb
     description: ComfyUI 起動ノートブック Pinggy 版を Colab で開く（書籍で使用するのはこちら）
   - code: SG26C
     url: https://j.aicu.ai/SG26C
-    expect_contains: colab.research.google.com
+    expect_contains: colab.research.google.com/github/aicuai/Book-SG26/blob/main/ipynb/ComfyUI.ipynb
     description: ComfyUI 起動ノートブック Cloudflare 版を Colab で開く（時間制限なしの代替）
   - code: CSGC
     url: https://j.aicu.ai/CSGC
