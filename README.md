@@ -68,7 +68,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 | ファイル | 内容 |
 |---------|------|
-| [`ipynb/ComfyUI.ipynb`](ipynb/ComfyUI.ipynb) | **ComfyUI 起動ノートブック（LTS）** |
+| [`ipynb/ComfyUI-pinggy.ipynb`](ipynb/ComfyUI-pinggy.ipynb) | **ComfyUI 起動ノートブック（Pinggy版）— 書籍で使用するのはこちら** |
+| [`ipynb/ComfyUI.ipynb`](ipynb/ComfyUI.ipynb) | ComfyUI 起動ノートブック（Cloudflare版・時間制限なしの代替） |
 | [`ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb`](ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb) | Forge (WebUI) 起動ノートブック |
 | [`ipynb/SG26-LoRA-KohyaTrainer.ipynb`](ipynb/SG26-LoRA-KohyaTrainer.ipynb) | LoRA 学習ノートブック |
 | [`prompts/chap5/README.md`](prompts/chap5/README.md) | 第5章のプロンプト全文（動画サンプル付き） |
@@ -83,8 +84,9 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 |---|---|
 | https://j.aicu.ai/SG26A | **書籍を購入する**（Amazon） |
 | https://j.aicu.ai/SG26CW | ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（5-2 / 5-3） |
-| https://j.aicu.ai/SG26C | ComfyUI 起動ノートブックを **Google Colab で開く** |
-| https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック（GitHub 上のファイル） |
+| https://j.aicu.ai/SG26P | **ComfyUI 起動ノートブック Pinggy版を Google Colab で開く（書籍で使用）** |
+| https://j.aicu.ai/SG26C | ComfyUI 起動ノートブック Cloudflare版を Google Colab で開く（代替） |
+| https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック Cloudflare版（GitHub 上のファイル） |
 | https://j.aicu.ai/CSGF | Forge Classic 起動ノートブック（2-5） |
 | https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック（3-11） |
 | https://j.aicu.ai/SG26Wan | Wan2.2 I2V ワークフロー（5-2） |
@@ -99,24 +101,28 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 ## Google Colab での使い方
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/SG26C)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://j.aicu.ai/SG26P)
 
-1. [`ipynb/ComfyUI.ipynb` を Google Colab で開く](https://j.aicu.ai/SG26C)
+**書籍で使用するのは Pinggy 版です。**
+
+1. [`ipynb/ComfyUI-pinggy.ipynb` を Google Colab で開く](https://j.aicu.ai/SG26P)
 2. **ファイル → ドライブにコピーを保存**（そのままでは編集内容を保存できません）
 3. Civitai API キーを Colab のシークレットに `CIVITAI_KEY` として登録
 4. 必要なモデルの URL を各フォルダ欄に入力
 5. セルを実行して ComfyUI を起動
+6. 実行ログに表示された Pinggy の URL を開き、**赤い「Enter site」ボタン**をクリック
 
 詳しい手順は書籍本編およびノートブック内の説明をご参照ください。
 
 ### トンネルについて
 
 ComfyUI の画面を Colab の外から開くために、トンネルを経由します。
+**方式ごとにノートブックが分かれています。**
 
-| 方式 | 特徴 |
-|---|---|
-| **Pinggy** | 起動・再起動が高速（20秒〜1分）。画像・動画のアップロードが安定し、Wan2.2 等の重いワークフローが完走しやすい。無料枠は **60分**（切れたらセルを再実行） |
-| **Cloudflare** | 時間制限なし。ただし大きなペイロードを扱うワークフローでは不安定な場合があります |
+| ノートブック | 方式 | 特徴 |
+|---|---|---|
+| **[`ComfyUI-pinggy.ipynb`](ipynb/ComfyUI-pinggy.ipynb)**<br>https://j.aicu.ai/SG26P | Pinggy | **書籍で使用。** 起動・再起動が高速（20秒〜1分）。画像・動画のアップロードが安定し、Wan2.2 等の重いワークフローが完走しやすい。無料枠は **60分**（切れたらセルを再実行） |
+| [`ComfyUI.ipynb`](ipynb/ComfyUI.ipynb)<br>https://j.aicu.ai/SG26C | Cloudflare | 時間制限なし。ただし大きなペイロードを扱うワークフローでは不安定な場合があります |
 
 Pinggy を使うと、URL を開いたときに次の確認画面が表示されます。
 **赤い「Enter site」ボタン**をクリックすると ComfyUI が開きます（初回のみ）。
@@ -206,7 +212,7 @@ python bench/bench_tunnel.py --compare results/
 ## 関連リンク
 
 - [書籍情報（SBクリエイティブ）](https://www.sbcr.jp/product/4815637675/)
-- [ComfyUI 起動ノートブックを Colab で開く](https://j.aicu.ai/SG26C)
+- [ComfyUI 起動ノートブック（Pinggy版）を Colab で開く](https://j.aicu.ai/SG26P)
 - [note.com 連載](https://j.aicu.ai/CSG)
 - [AICU media](https://ja.aicu.ai/)
 - [ComfyUI 公式](https://www.comfy.org/)
@@ -422,11 +428,12 @@ SBクリエイティブ 編集部
 
 ### ノートブックを変更するとき
 
-`ipynb/ComfyUI.ipynb` は短縮URL https://j.aicu.ai/SG26C の参照先で、
-読者がいつ開くか分かりません。**検証していない変更を `main` に入れないでください。**
+`ipynb/` 配下のノートブックは[短縮URL](#短縮url)の参照先で、読者がいつ開くか分かりません。
+**検証していない変更を `main` に入れないでください。**
+とくに書籍で使用する `ipynb/ComfyUI-pinggy.ipynb`（https://j.aicu.ai/SG26P ）は要注意です。
 
 1. ブランチを切って push する
-2. `https://colab.research.google.com/github/aicuai/Book-SG26/blob/<branch>/ipynb/ComfyUI.ipynb`
+2. `https://colab.research.google.com/github/aicuai/Book-SG26/blob/<branch>/ipynb/<ノートブック名>`
    で実機テストする（ローカルでは Colab 環境を再現できません）
 3. 動作確認後に `main` へマージする
 

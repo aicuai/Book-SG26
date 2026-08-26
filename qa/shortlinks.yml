@@ -29,10 +29,14 @@ shortlinks:
     url: https://j.aicu.ai/SG26CW
     expect_contains: ipynb/SG26-ComfyUI-Wan22.ipynb
     description: ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（書籍 5-2 / 5-3）
+  - code: SG26P
+    url: https://j.aicu.ai/SG26P
+    expect_contains: ipynb/ComfyUI-pinggy.ipynb
+    description: ComfyUI 起動ノートブック Pinggy 版を Colab で開く（書籍で使用するのはこちら）
   - code: SG26C
     url: https://j.aicu.ai/SG26C
     expect_contains: colab.research.google.com
-    description: ComfyUI 起動ノートブックを Colab で開く（書籍 第5章）
+    description: ComfyUI 起動ノートブック Cloudflare 版を Colab で開く（時間制限なしの代替）
   - code: CSGC
     url: https://j.aicu.ai/CSGC
     expect_contains: ipynb/ComfyUI.ipynb
