@@ -80,21 +80,40 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 書籍紙面の QR コードはこの短縮URLを指しています。リポジトリ構成が変わっても、
 短縮URLの転送先を付け替えることで**リンクは維持されます**。
 
-| 短縮URL | 転送先 |
-|---|---|
-| https://j.aicu.ai/SG26A | **書籍を購入する**（Amazon） |
-| https://j.aicu.ai/SG26CW | ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（5-2 / 5-3） |
-| https://j.aicu.ai/SG26P | **ComfyUI 起動ノートブック Pinggy版を Google Colab で開く（書籍で使用）** |
-| https://j.aicu.ai/SG26C | ComfyUI 起動ノートブック Cloudflare版を Google Colab で開く（代替） |
-| https://j.aicu.ai/CSGC | ComfyUI 起動ノートブック Cloudflare版（GitHub 上のファイル） |
-| https://j.aicu.ai/CSGF | Forge Classic 起動ノートブック（2-5） |
-| https://j.aicu.ai/SG26LoRA | LoRA 学習ノートブック（3-11） |
-| https://j.aicu.ai/SG26Wan | Wan2.2 I2V ワークフロー（5-2） |
-| https://j.aicu.ai/SG26WanF | Wan2.2 FLF2V ワークフロー（5-3） |
-| https://j.aicu.ai/SG26R2V | Seedance 2.0 R2V ワークフロー（5-4） |
-| https://j.aicu.ai/SG26US | SeedVR2 アップスケールワークフロー（5-4） |
-| https://j.aicu.ai/SG26c5 | 第5章のプロンプト集（サンプル動画つき） |
-| https://j.aicu.ai/CSG | note.com 連載 |
+| 短縮URL | 開いたとき | 内容 | 紙面 |
+|---|---|---|---|
+| https://j.aicu.ai/SG26P | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Pinggy 版（**書籍で使用**） | 2章 |
+| https://j.aicu.ai/CSGF | 🚀 **Colab で起動** | Forge Classic 起動ノートブック | 2-5 p.68-69 |
+| https://j.aicu.ai/SG26CW | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Wan2.2 版 | 5-2 / 5-3 p.228-229 |
+| https://j.aicu.ai/SG26CR | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Seedance 2.0 R2V | 5-4 p.254-255 |
+| https://j.aicu.ai/SG26LoRA | 🚀 **Colab で起動** | LoRA 学習ノートブック | 3-11 |
+| https://j.aicu.ai/SG26C | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Cloudflare 版（代替） | — |
+| https://j.aicu.ai/SG26Wan | 💾 **ダウンロード** | Wan2.2 I2V ワークフロー | 5-2 p.228-229 |
+| https://j.aicu.ai/SG26WanF | 💾 **ダウンロード** | Wan2.2 FLF2V ワークフロー | 5-3 p.240-241 |
+| https://j.aicu.ai/SG26R2V | 💾 **ダウンロード** | Seedance 2.0 R2V ワークフロー | 5-4 p.254-255 |
+| https://j.aicu.ai/SG26US | 💾 **ダウンロード** | SeedVR2 アップスケールワークフロー | 5-4 |
+| https://j.aicu.ai/CSGC | 💾 **ダウンロード** | ComfyUI 起動ノートブック（GitHub 表示） | — |
+| https://j.aicu.ai/SG26c5 | 📂 一覧を表示 | 第5章のプロンプト集（サンプル動画つき） | 5章 |
+| https://j.aicu.ai/SG26A | 🛒 外部サイト | 書籍を購入する（Amazon） | — |
+| https://j.aicu.ai/CSG | 🔗 外部サイト | note.com 連載 | — |
+
+### 🚀 と 💾 で紙面の手順が変わります
+
+**🚀 Colab で起動** — QR を読むと **Google Colab でノートブックが開きます**。
+ダウンロードは不要です。ただし **Colab で GitHub から開いたノートブックは
+編集が保存されません**。読者はモデルURL等のフォーム欄を書き換えるので、
+紙面には次の一行が必要です。
+
+> 実行する前に、上部の「**ドライブにコピー**」をクリックしてください。
+> コピーしないと、設定を変えてもページを閉じたときに消えてしまいます。
+
+**💾 ダウンロード** — GitHub のファイルページが開きます。
+右上の**ダウンロードアイコン**をクリックして保存し、ComfyUI に読み込みます。
+
+> ⚠️ **ワークフロー（.json）は Colab では開けません。**
+> Colab の GitHub ローダは `.ipynb` しか受け付けず、JSON を渡すと
+> `invalid notebook` になります。**ノートブックとワークフローで手順が違う**のは
+> このためです。5章 p.228-229 は同じ見開きに両方の QR があるので、書き分けが要ります。
 
 この表は [`qa/shortlinks.yml`](qa/shortlinks.yml) が正本で、毎週の QA で転送先まで自動検査しています。
 **短縮URLの発行・付け替えは人が行います**（自動化していません）。
