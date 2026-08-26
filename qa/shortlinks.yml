@@ -27,7 +27,7 @@
 shortlinks:
   - code: SG26CW
     url: https://j.aicu.ai/SG26CW
-    expect_contains: ipynb/SG26-ComfyUI-Wan22.ipynb
+    expect_contains: colab.research.google.com
     description: ざすこ式 ComfyUI 起動ノートブック Wan2.2 版（書籍 5-2 / 5-3）
   - code: SG26P
     url: https://j.aicu.ai/SG26P
@@ -35,6 +35,10 @@ shortlinks:
     # 読者は「ソースが見えるだけで起動できない」状態になるため。
     expect_contains: colab.research.google.com/github/aicuai/Book-SG26/blob/main/ipynb/ComfyUI-pinggy.ipynb
     description: ComfyUI 起動ノートブック Pinggy 版を Colab で開く（書籍で使用するのはこちら）
+  - code: SG26CR
+    url: https://j.aicu.ai/SG26CR
+    expect_contains: colab.research.google.com
+    description: R2V 用 ComfyUI 起動ノートブック（書籍 5-4）
   - code: SG26C
     url: https://j.aicu.ai/SG26C
     expect_contains: colab.research.google.com/github/aicuai/Book-SG26/blob/main/ipynb/ComfyUI.ipynb
@@ -45,7 +49,7 @@ shortlinks:
     description: ComfyUI 起動ノートブック（GitHub 表示）
   - code: CSGF
     url: https://j.aicu.ai/CSGF
-    expect_contains: ipynb/Stable_Diffusion_WebUI_Forge_classic.ipynb
+    expect_contains: colab.research.google.com
     description: Forge Classic 起動ノートブック（書籍 2-5）
   - code: SG26LoRA
     url: https://j.aicu.ai/SG26LoRA
@@ -57,19 +61,19 @@ shortlinks:
     description: 第5章のプロンプト素材
   - code: SG26Wan
     url: https://j.aicu.ai/SG26Wan
-    expect_contains: workflow/SG26Wan22-14B-I2V-GGUF.json
+    expect_contains: github.com/aicuai/Book-SG26/blob/main/workflow/SG26Wan22-14B-I2V-GGUF.json
     description: Wan2.2 I2V ワークフロー（書籍 5-2）
   - code: SG26WanF
     url: https://j.aicu.ai/SG26WanF
-    expect_contains: workflow/SG26Wan22-14B-FLF2V-GGUF.json
+    expect_contains: github.com/aicuai/Book-SG26/blob/main/workflow/SG26Wan22-14B-FLF2V-GGUF.json
     description: Wan2.2 FLF2V ワークフロー（書籍 5-3）
   - code: SG26R2V
     url: https://j.aicu.ai/SG26R2V
-    expect_contains: workflow/WorkFlow_api_seedance2_R2V.json
+    expect_contains: github.com/aicuai/Book-SG26/blob/main/workflow/WorkFlow_api_seedance2_R2V.json
     description: Seedance2.0 R2V ワークフロー（書籍 5-4）
   - code: SG26US
     url: https://j.aicu.ai/SG26US
-    expect_contains: workflow/VideoUpScaleSeedVR2.json
+    expect_contains: github.com/aicuai/Book-SG26/blob/main/workflow/VideoUpScaleSeedVR2.json
     description: SeedVR2 アップスケールワークフロー（書籍 5-4）
   - code: SG26A
     url: https://j.aicu.ai/SG26A
