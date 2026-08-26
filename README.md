@@ -33,8 +33,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 
 - **発売日**: 2026年9月19日（土）
 - **ISBN**: 978-4-8156-3767-5
-- **サイズ**: B5判 / 272ページ
-- **定価**: 2,860円（本体2,600円＋10%税）
+- **サイズ**: B5判 / 320ページ
+- **定価**: 3,300円（本体3,000円＋10%税）
 - **著者**: [AICU media 編集部](https://x.com/aicuai) / [白井 暁彦](https://x.com/o_ob) / [道草 雑草子（ざすこ）](https://x.com/zasuko_michiksa)
 - **出版社**: SBクリエイティブ
 - **書籍ページ**: https://www.sbcr.jp/product/4815637675/
@@ -245,7 +245,7 @@ python bench/bench_tunnel.py --compare results/
 | 出版社 | SBクリエイティブ |
 | 発行 | 2026年9月19日 |
 | ISBN | 978-4-8156-3767-5 |
-| 判型・頁 | B5判 / 272ページ |
+| 判型・頁 | B5判 / 320ページ |
 | 書籍ページ | https://www.sbcr.jp/product/4815637675/ |
 | 購入（Amazon） | https://j.aicu.ai/SG26A |
 | サポートリポジトリ | https://github.com/aicuai/Book-SG26 |
@@ -269,7 +269,7 @@ python bench/bench_tunnel.py --compare results/
   year      = {2026},
   month     = {9},
   isbn      = {978-4-8156-3767-5},
-  pages     = {272},
+  pages     = {320},
   url       = {https://www.sbcr.jp/product/4815637675/},
   note      = {サポートリポジトリ: \url{https://github.com/aicuai/Book-SG26}}
 }
@@ -286,7 +286,7 @@ ASCII のみの処理系向け（英語論文で引用する場合）:
   year      = {2026},
   month     = {9},
   isbn      = {978-4-8156-3767-5},
-  pages     = {272},
+  pages     = {320},
   language  = {japanese},
   url       = {https://www.sbcr.jp/product/4815637675/},
   note      = {In Japanese. Support repository: \url{https://github.com/aicuai/Book-SG26}}
