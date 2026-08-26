@@ -1442,7 +1442,7 @@
       ],
       "properties": {
         "aux_id": "aria1th/ComfyUI-LogicUtils",
-        "ver": "1.7.2",
+        "ver": "1.8.0",
         "Node name for S&R": "ResizeShortestToNode",
         "cnr_id": "comfyui-logicutils",
         "ue_properties": {
