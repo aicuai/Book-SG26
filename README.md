@@ -60,8 +60,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 | [`prompts/`](prompts/) | 章ごとのプロンプト素材 |
 | [`workflow/`](workflow/) | ComfyUI ワークフロー JSON（UI 形式） |
 | [`api-workflows/`](api-workflows/) | ComfyUI ワークフロー JSON（API 形式） |
-| [`WebUI_Launch_Setup_Files/`](WebUI_Launch_Setup_Files/) | ノートブックが自動取得するサンプル画像・設定ファイル |
-| [`images/`](images/) | 書影等 |
+| [`WebUI_Launch_Setup_Files/`](WebUI_Launch_Setup_Files/) | WebUI (Forge) 用の設定ファイル（Config-Presets / prompt-all-in-one） |
+| [`images/`](images/) | ノートブックが `input/` に自動取得するサンプル画像（`sg26_*.png`）、書影、解説図 |
 | [`bench/`](bench/) | トンネル速度ベンチマーク |
 
 ### 主なコンテンツ
