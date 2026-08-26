@@ -1,56 +1,9 @@
 {
   "id": "6cbd3849-257d-4509-886d-7cf066d8adb3",
   "revision": 0,
-  "last_node_id": 7,
-  "last_link_id": 11,
+  "last_node_id": 12,
+  "last_link_id": 22,
   "nodes": [
-    {
-      "id": 2,
-      "type": "SeedVR2LoadDiTModel",
-      "pos": [
-        1502.7793885166452,
-        7920.847563656552
-      ],
-      "size": [
-        317.5625,
-        380.3125
-      ],
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "torch_compile_args",
-          "shape": 7,
-          "type": "TORCH_COMPILE_ARGS",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SEEDVR2_DIT",
-          "type": "SEEDVR2_DIT",
-          "links": [
-            2
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SeedVR2LoadDiTModel",
-        "cnr_id": "seedvr2_videoupscaler",
-        "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
-      },
-      "widgets_values": [
-        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
-        "cuda:0",
-        0,
-        false,
-        "none",
-        false,
-        "sdpa"
-      ]
-    },
     {
       "id": 3,
       "type": "SeedVR2LoadVAEModel",
@@ -63,7 +16,7 @@
         535.3125
       ],
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "inputs": [
         {
@@ -83,10 +36,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "SeedVR2LoadVAEModel",
-        "cnr_id": "seedvr2_videoupscaler",
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
+        "Node name for S&R": "SeedVR2LoadVAEModel",
+        "cnr_id": "seedvr2_videoupscaler"
       },
       "widgets_values": [
         "ema_vae_fp16.safetensors",
@@ -103,204 +56,24 @@
       ]
     },
     {
-      "id": 6,
-      "type": "VHS_VideoCombine",
+      "id": 4,
+      "type": "SeedVR2VideoUpscaler",
       "pos": [
-        2515.7469212352485,
-        7783.600011564781
+        1875.3162913938427,
+        7745.53621937997
       ],
       "size": [
-        610.1875,
-        452.90625
+        588.833984375,
+        670.890625
       ],
       "flags": {},
       "order": 4,
       "mode": 0,
       "inputs": [
         {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 11
-        },
-        {
-          "name": "audio",
-          "shape": 7,
-          "type": "AUDIO",
-          "link": 8
-        },
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "Filenames",
-          "type": "VHS_FILENAMES",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_VideoCombine",
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "8e4d79471bf1952154768e8435a9300077b534fa",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "version": "7.1",
-          "input_ue_unconnectable": {}
-        }
-      },
-      "widgets_values": {
-        "frame_rate": 24,
-        "loop_count": 0,
-        "filename_prefix": "%date:yyyy-MM-dd%/UpScale",
-        "format": "video/h264-mp4",
-        "pix_fmt": "yuv420p",
-        "crf": 19,
-        "save_metadata": true,
-        "trim_to_audio": false,
-        "pingpong": false,
-        "save_output": true,
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "filename": "SD2_00003-audio.mp4",
-            "subfolder": "2026-05-04",
-            "type": "output",
-            "format": "video/h264-mp4",
-            "frame_rate": 24,
-            "workflow": "SD2_00003.png",
-            "fullpath": "/content/drive/MyDrive/ComfyUI_output/2026-05-04/SD2_00003-audio.mp4"
-          }
-        }
-      },
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 7,
-      "type": "VHS_LoadVideo",
-      "pos": [
-        1028.1381071483352,
-        7764.290623632957
-      ],
-      "size": [
-        410.625,
-        634.625
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "meta_batch",
-          "shape": 7,
-          "type": "VHS_BatchManager",
-          "link": null
-        },
-        {
-          "name": "vae",
-          "shape": 7,
-          "type": "VAE",
-          "link": null
-        },
-        {
-          "label": "履歴から動画を選択",
-          "name": "video",
-          "type": "COMBO",
-          "widget": {
-            "name": "video"
-          },
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            10
-          ]
-        },
-        {
-          "name": "frame_count",
-          "type": "INT",
-          "links": null
-        },
-        {
-          "name": "audio",
-          "type": "AUDIO",
-          "links": [
-            8
-          ]
-        },
-        {
-          "name": "video_info",
-          "type": "VHS_VIDEOINFO",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VHS_LoadVideo",
-        "cnr_id": "comfyui-videohelpersuite",
-        "ver": "2984ec4c4b93292421888f38db74a5e8802a8ff8",
-        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite"
-      },
-      "widgets_values": {
-        "video": "Seedance 20 - Use _Image1 for Hibiki Mei_s character design_ facial features_ hairstyle_ outfit_ an (1).mp4",
-        "force_rate": 0,
-        "custom_width": 0,
-        "custom_height": 0,
-        "frame_load_cap": 0,
-        "skip_first_frames": 0,
-        "select_every_nth": 1,
-        "format": "None",
-        "videopreview": {
-          "hidden": false,
-          "paused": false,
-          "params": {
-            "force_rate": 0,
-            "custom_width": 0,
-            "custom_height": 0,
-            "frame_load_cap": 0,
-            "skip_first_frames": 0,
-            "select_every_nth": 1,
-            "filename": "Seedance 20 - Use _Image1 for Hibiki Mei_s character design_ facial features_ hairstyle_ outfit_ an (1).mp4",
-            "type": "input",
-            "format": "video/mp4"
-          }
-        }
-      }
-    },
-    {
-      "id": 4,
-      "type": "SeedVR2VideoUpscaler",
-      "pos": [
-        1873.7057813938427,
-        7779.356929379971
-      ],
-      "size": [
-        588.8125,
-        670.890625
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [
-        {
           "name": "image",
           "type": "IMAGE",
-          "link": 10
+          "link": 21
         },
         {
           "name": "dit",
@@ -341,10 +114,10 @@
         }
       ],
       "properties": {
-        "Node name for S&R": "SeedVR2VideoUpscaler",
-        "cnr_id": "seedvr2_videoupscaler",
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
         "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
-        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler"
+        "Node name for S&R": "SeedVR2VideoUpscaler",
+        "cnr_id": "seedvr2_videoupscaler"
       },
       "widgets_values": [
         2892305368,
@@ -361,6 +134,238 @@
         "cpu",
         false
       ]
+    },
+    {
+      "id": 7,
+      "type": "LoadVideo",
+      "pos": [
+        1126.3792171483344,
+        7746.575013632958
+      ],
+      "size": [
+        340,
+        430
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "アップスケールする動画",
+          "name": "file",
+          "type": "COMBO",
+          "widget": {
+            "name": "file"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "LoadVideo"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2507.6943712352486,
+        7743.337261564777
+      ],
+      "size": [
+        610.1875,
+        686.8636363636364
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 22
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "Kosinkadink/ComfyUI-VideoHelperSuite",
+        "ver": "8e4d79471bf1952154768e8435a9300077b534fa",
+        "Node name for S&R": "VHS_VideoCombine",
+        "cnr_id": "comfyui-videohelpersuite",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.1",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 24,
+        "loop_count": 0,
+        "filename_prefix": "%date:yyyy-MM-dd%/UpScale",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": true,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "SD2_00003-audio.mp4",
+            "subfolder": "2026-05-04",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 24,
+            "workflow": "SD2_00003.png",
+            "fullpath": "/content/drive/MyDrive/ComfyUI_output/2026-05-04/SD2_00003-audio.mp4"
+          }
+        }
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 2,
+      "type": "SeedVR2LoadDiTModel",
+      "pos": [
+        1509.2214285166451,
+        7945.005213656556
+      ],
+      "size": [
+        317.5625,
+        380.3125
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "torch_compile_args",
+          "shape": 7,
+          "type": "TORCH_COMPILE_ARGS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEEDVR2_DIT",
+          "type": "SEEDVR2_DIT",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "numz/ComfyUI-SeedVR2_VideoUpscaler",
+        "ver": "4490bd1f482e026674543386bb2a4d176da245b9",
+        "Node name for S&R": "SeedVR2LoadDiTModel",
+        "cnr_id": "seedvr2_videoupscaler"
+      },
+      "widgets_values": [
+        "seedvr2_ema_3b_fp8_e4m3fn.safetensors",
+        "cuda:0",
+        0,
+        false,
+        "none",
+        false,
+        "sdpa"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "GetVideoComponents",
+      "pos": [
+        1521.5476871483338,
+        7748.596653632956
+      ],
+      "size": [
+        250,
+        127
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "bit_depth",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "GetVideoComponents"
+      },
+      "widgets_values": [],
+      "color": "#233",
+      "bgcolor": "#355"
     }
   ],
   "links": [
@@ -381,28 +386,36 @@
       "SEEDVR2_VAE"
     ],
     [
-      8,
-      7,
-      2,
-      6,
-      1,
-      "AUDIO"
-    ],
-    [
-      10,
-      7,
-      0,
-      4,
-      0,
-      "IMAGE"
-    ],
-    [
       11,
       4,
       0,
       6,
       0,
       "IMAGE"
+    ],
+    [
+      20,
+      7,
+      0,
+      12,
+      0,
+      "VIDEO"
+    ],
+    [
+      21,
+      12,
+      0,
+      4,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      12,
+      1,
+      6,
+      1,
+      "AUDIO"
     ]
   ],
   "groups": [],
@@ -411,23 +424,15 @@
     "ds": {
       "scale": 0.6209213230591556,
       "offset": [
-        -837.7668615823176,
-        -7526.842661150485
+        -1006.8704115823177,
+        -7443.0961411504895
       ]
     },
     "linearData": {
       "inputs": [
         [
           "7",
-          "video"
-        ],
-        [
-          "7",
-          "choose video to upload"
-        ],
-        [
-          "7",
-          "videopreview"
+          "file"
         ],
         [
           "4",
@@ -443,7 +448,7 @@
       ]
     },
     "linearMode": true,
-    "frontendVersion": "1.42.15",
+    "frontendVersion": "1.48.7",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
