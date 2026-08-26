@@ -86,7 +86,8 @@ ComfyUI を使った画像・動画生成のワークフロー、テンプレー
 | https://j.aicu.ai/CSGF | 🚀 **Colab で起動** | Forge Classic 起動ノートブック | 2-5 p.68-69 |
 | https://j.aicu.ai/SG26CW | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Wan2.2 版 | 5-2 / 5-3 p.228-229 |
 | https://j.aicu.ai/SG26CR | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Seedance 2.0 R2V | 5-4 p.254-255 |
-| https://j.aicu.ai/SG26LoRA | 🚀 **Colab で起動** | LoRA 学習ノートブック | 3-11 |
+| https://j.aicu.ai/LoRA26 | 🚀 **Colab で起動** | LoRA Trainer LTS 版（HollowStrawberry 式） | — |
+| https://j.aicu.ai/SG26LoRA | 🚀 **Colab で起動** | LoRA 学習ノートブック（付録） | 4-5 参照 |
 | https://j.aicu.ai/SG26C | 🚀 **Colab で起動** | ComfyUI 起動ノートブック Cloudflare 版（代替） | — |
 | https://j.aicu.ai/SG26Wan | 💾 **ダウンロード** | Wan2.2 I2V ワークフロー | 5-2 p.228-229 |
 | https://j.aicu.ai/SG26WanF | 💾 **ダウンロード** | Wan2.2 FLF2V ワークフロー | 5-3 p.240-241 |

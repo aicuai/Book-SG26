@@ -51,10 +51,14 @@ shortlinks:
     url: https://j.aicu.ai/CSGF
     expect_contains: colab.research.google.com
     description: Forge Classic 起動ノートブック（書籍 2-5）
+  - code: LoRA26
+    url: https://j.aicu.ai/LoRA26
+    expect_contains: AICU_LoRA_Trainer_LTS.ipynb
+    description: LoRA Trainer LTS 版（HollowStrawberry 式）。note 記事から参照
   - code: SG26LoRA
     url: https://j.aicu.ai/SG26LoRA
     expect_contains: ipynb/SG26-LoRA-KohyaTrainer.ipynb
-    description: LoRA 学習ノートブック（書籍 3-11）
+    description: LoRA 学習ノートブック（書籍の付録。本文の LoRA 解説は 4-5）
   - code: SG26c5
     url: https://j.aicu.ai/SG26c5
     expect_contains: prompts/chap5
