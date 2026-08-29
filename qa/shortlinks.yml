@@ -25,6 +25,10 @@
 #                   instead of failing the build.
 
 shortlinks:
+  - code: SG26HF
+    url: https://j.aicu.ai/SG26HF
+    expect_contains: huggingface.co/AICU/SDXL-LoRA
+    description: LoRA 学習用データセットと配布 LoRA（書籍 4-5 紙面 p.204-205 から参照）
   - code: SG26CW
     url: https://j.aicu.ai/SG26CW
     expect_contains: colab.research.google.com
@@ -57,8 +61,10 @@ shortlinks:
     description: LoRA Trainer LTS 版（HollowStrawberry 式）。note 記事から参照
   - code: SG26LoRA
     url: https://j.aicu.ai/SG26LoRA
-    expect_contains: ipynb/SG26-LoRA-KohyaTrainer.ipynb
-    description: LoRA 学習ノートブック（書籍の付録。本文の LoRA 解説は 4-5）
+    # ホストまで含めて検査する。github.com のファイル表示に差し替わると
+    # 読者は「ソースが見えるだけで起動できない」状態になるため。
+    expect_contains: colab.research.google.com/github/aicuai/Book-SG26/blob/main/ipynb/SG26-LoRA-KohyaTrainer.ipynb
+    description: LoRA 学習ノートブック（ざすこ式。本文の LoRA 解説は 4-5）
   - code: SG26c5
     url: https://j.aicu.ai/SG26c5
     expect_contains: prompts/chap5
