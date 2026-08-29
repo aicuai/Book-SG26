@@ -25,6 +25,10 @@
 #                   instead of failing the build.
 
 shortlinks:
+  - code: SG26HF
+    url: https://j.aicu.ai/SG26HF
+    expect_contains: huggingface.co/AICU/SDXL-LoRA
+    description: LoRA 学習用データセットと配布 LoRA（書籍 4-5 紙面 p.204-205 から参照）
   - code: SG26CW
     url: https://j.aicu.ai/SG26CW
     expect_contains: colab.research.google.com
