@@ -25,6 +25,14 @@
 #                   instead of failing the build.
 
 shortlinks:
+  - code: chosakuken
+    url: https://j.aicu.ai/chosakuken
+    expect_contains: bunka.go.jp/seisaku/chosakuken/aiandcopyright.html
+    description: 文化庁「AIと著作権」（書籍 6章 紙面 p.13）
+  - code: GC
+    url: https://j.aicu.ai/GC
+    expect_contains: cert.aicu.ai/gc-royalty
+    description: GC 生成商用・原作者還元ライセンス（書籍 6章 紙面 p.14）
   - code: SG26HF
     url: https://j.aicu.ai/SG26HF
     expect_contains: huggingface.co/AICU/SDXL-LoRA
