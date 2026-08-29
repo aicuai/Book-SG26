@@ -33,6 +33,18 @@ shortlinks:
     url: https://j.aicu.ai/GC
     expect_contains: cert.aicu.ai/gc-royalty
     description: GC 生成商用・原作者還元ライセンス（書籍 6章 紙面 p.14）
+  - code: JPC2025
+    url: https://j.aicu.ai/JPC2025
+    expect_contains: jpc-net.jp/research/detail/007846.html
+    description: 日本生産性本部「労働生産性の国際比較2025」（書籍 7章 紙面 p.4）
+  - code: B260618
+    url: https://j.aicu.ai/B260618
+    expect_contains: note.com/o_ob/n/n40d9048c16fe
+    description: note「AIが思い通りに動かない人へ」（書籍 7章 紙面 p.7）
+  - code: B260620
+    url: https://j.aicu.ai/B260620
+    expect_contains: note.com/o_ob/n/nac16fe9b43fb
+    description: note「AI時代のモラトリアム」（書籍 7章 紙面 p.8）
   - code: SG26HF
     url: https://j.aicu.ai/SG26HF
     expect_contains: huggingface.co/AICU/SDXL-LoRA
