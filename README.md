@@ -340,7 +340,7 @@ ASCII のみの処理系向け（英語論文で引用する場合）:
 
 | 対象 | ライセンス |
 |---|---|
-| [ComfyUI](https://github.com/comfyanonymous/ComfyUI) | GPL-3.0 |
+| [ComfyUI](https://github.com/Comfy-Org/ComfyUI) | GPL-3.0 |
 | [ComfyUI_GGUF](https://github.com/Isi-dev/ComfyUI_GGUF) | Apache-2.0 |
 | [ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) | Apache-2.0 |
 | [rgthree-comfy](https://github.com/rgthree/rgthree-comfy) | MIT |
@@ -415,7 +415,7 @@ Partner Node は各提供者の規約に従うとしています。ByteDance 側
 [GACLove](https://github.com/GACLove) / [princepainter](https://github.com/princepainter)
 
 **上流プロジェクト**
-[ComfyUI](https://github.com/comfyanonymous/ComfyUI)（comfyanonymous 氏と貢献者のみなさま）/
+[ComfyUI](https://github.com/Comfy-Org/ComfyUI)（comfyanonymous 氏と貢献者のみなさま）/
 [Comfy-Org](https://huggingface.co/Comfy-Org) / [QuantStack](https://huggingface.co/QuantStack) /
 [Wan-AI](https://huggingface.co/Wan-AI) / [Stability AI](https://huggingface.co/stabilityai) /
 [Pinggy](https://pinggy.io/) / [Cloudflare](https://www.cloudflare.com/)
